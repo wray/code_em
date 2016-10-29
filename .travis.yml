@@ -6,3 +6,6 @@ python:
 #install: "pip install "
 
 script: ./unittests
+
+notifications:
+  slack: techemstudents:kfQjbkxRmQyvLyPGg6eUSp3u
