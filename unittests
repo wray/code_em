@@ -1,1 +1,1 @@
-python slackbot/testit.py
+python -m slackbot.testit
