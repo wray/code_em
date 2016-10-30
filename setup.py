@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
-  name = 'create_em',
-  packages = ['create_em'],
+  name = 'slackbot_ce',
+  packages = ['slackbot_ce'],
   version = '0.1',
   description = 'Python Code for Tech Em Studios Create Em Class',
   author = 'Techem Studios',

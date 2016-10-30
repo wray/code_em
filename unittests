@@ -1,1 +1,1 @@
-python -m slackbot.testit
+python -m slackbot_ce.testit
