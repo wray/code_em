@@ -1,6 +1,9 @@
 import os
 import time
-import Adafruit_DHT
+try:
+    import Adafruit_DHT
+except ImportError:
+    pass
 
 sensor = Adafruit_DHT.DHT22
 pin = 4

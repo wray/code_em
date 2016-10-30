@@ -4,7 +4,6 @@ python:
 install:
   - pip install slackclient
   - pip install urllib3
-  - pip install adafruit_python_dht
 script: ./unittests
 notifications:
   slack:
