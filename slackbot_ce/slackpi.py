@@ -24,6 +24,9 @@ def handle_command(command, channel):
 
     response = ""
     response = wray.slacklib.handle_command(command)
+
+    if len(response) == 0:
+        response = "Why thank you, I don't know what else to say"
     
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
@@ -46,7 +49,7 @@ def parse_slack_output(slack_rtm_output):
     return None, None
 
 if __name__ == "__main__":
-    READ_WEBSOCKET_DELAY = 30 # 1 second delay between reading from firehose
+    READ_WEBSOCKET_DELAY = 1 # 1 second delay between reading from firehose
     if slack_client.rtm_connect():
         print("StarterBot connected and running!")
         while True:
