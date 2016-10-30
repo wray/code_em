@@ -1,7 +1,9 @@
+from setuptools import find_packagaes
+
 from distutils.core import setup
 setup(
   name = 'slackbot_ce',
-  packages = ['slackbot_ce'],
+  packages = find_packages(),
   version = '0.1',
   description = 'Python Code for Tech Em Studios Create Em Class',
   author = 'Techem Studios',
