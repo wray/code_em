@@ -15,8 +15,8 @@ setup(
   description = 'Python Code for Tech Em Studios Create Em Class',
   author = 'Techem Studios',
   author_email = 'wray@techemstudios.com',
-  url = 'https://github.com/wray/create_em',
-  download_url = 'https://github.com/wray/create_em/tarball/'+ver,
+  url = 'https://github.com/wray/code_em',
+  download_url = 'https://github.com/wray/code_em/tarball/'+ver,
   keywords = ['slackbot', 'RPi', 'AWS'],
   classifiers = [],
 )
