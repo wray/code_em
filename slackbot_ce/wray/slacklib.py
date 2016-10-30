@@ -10,7 +10,7 @@ def handle_command(command):
     response = ""
     if command.find(COMMAND1) >= 0:
         response = "I am a simpleton bot."
-    elif command.find(COMMAND2) > = 0:
+    elif command.find(COMMAND2) >= 0:
         response = "Not much right now... waiting for students to teach me."
 
     return response
