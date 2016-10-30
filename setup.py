@@ -7,7 +7,7 @@ setup(
   author = 'Techem Studios',
   author_email = 'wray@techemstudios.com',
   url = 'https://github.com/wray/create-em',
-  download_url = 'https://github.com/peterldowns/create-em',
+  download_url = 'https://github.com/wray/create-em/tarball/0.1',
   keywords = ['slackbot', 'RPi', 'AWS'],
   classifiers = [],
 )

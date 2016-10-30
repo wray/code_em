@@ -1,6 +1,7 @@
 language: python
 python:
 - '2.7'
+install: "pip install slackclient"
 script: ./unittests
 notifications:
   slack: techemstudents:kfQjbkxRmQyvLyPGg6eUSp3u
