@@ -1,7 +1,11 @@
+import random
+import json
+import urllib3
 
 COMMAND1 = "who are you"
 COMMAND2 = "what can you do"
 COMMAND3 = "temp"
+COMMAND4 = "name an animal"
 
 def handle_command(command):
     """
@@ -15,6 +19,10 @@ def handle_command(command):
         response = "Not much right now... waiting for students to teach me."
     elif command.find(COMMAND3) >= 0:
         response = "Building up skills to sense temperature and humidity now. Stay tuned."
+    elif command.find(COMMAND4) >= 0:
+        http = urllib3.PoolManager()
+        animals = json.load(http.request('GET','https://www.randomlists.com/data/animals.json').readall().decode('utf-8'))['data']
+        response = animals[random.randint(0,len(animals)-1)]
         
     return response
 
