@@ -21,7 +21,7 @@ def handle_command(command):
         response = "Building up skills to sense temperature and humidity now. Stay tuned."
     elif command.find(COMMAND4) >= 0:
         http = urllib3.PoolManager()
-        animals = json.load(http.request('GET','https://www.randomlists.com/data/animals.json').readall().decode('utf-8'))['data']
+        animals = json.loads(http.request('GET','https://www.randomlists.com/data/animals.json').data.decode('utf-8'))['data']
         response = animals[random.randint(0,len(animals)-1)]
         
     return response
