@@ -1,5 +1,5 @@
 # Put your commands here
-COMMAND1 = ""
+COMMAND1 = "what color is the sky?"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -9,7 +9,7 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = "Huh?"
+        response = "It depends on who you are asking. I would say it is purple."
         
     return response
 
