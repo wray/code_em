@@ -1,5 +1,6 @@
 import unittest
 import bot_id
+import slackpi
 import wray.slacklib
 import chris.slacklib
 import joe.slacklib
@@ -11,6 +12,9 @@ class TestSlackBotFunctions(unittest.TestCase):
 
     def test_slack_client(self):
         self.assertTrue(bot_id.get_id() == None)
+
+    def test_slack_pi(self):
+        self.assertFalse(slackpi.handle_command("","") == None)
 
     def test_wray_handler(self):
         self.assertFalse(wray.slacklib.handle_command('') == None)
