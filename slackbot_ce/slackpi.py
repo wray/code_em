@@ -30,7 +30,7 @@ def handle_command(command, channel):
     response = ""
     response = wray.slacklib.handle_command(command)
     response += joe.slacklib.handle_command(command)
-    reponse += chris.slacklib.handle_command(command)
+    response += chris.slacklib.handle_command(command)
 
     if len(response) == 0:
         response = "Why thank you, I don't know what else to say."
