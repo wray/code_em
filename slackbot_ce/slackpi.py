@@ -28,12 +28,13 @@ def handle_command(command, channel):
         Need to determine an algorithm for student overloaded commands.
     """
 
-    response = ""
     response = wray.slacklib.handle_command(command)
     response += joe.slacklib.handle_command(command)
     response += chris.slacklib.handle_command(command)
     response += homeschool.baron.slacklib.handle_command(command)
 
+    print("["+response+"]")
+    
     if len(response) == 0:
         response = "Why thank you, I don't know what else to say."
     
