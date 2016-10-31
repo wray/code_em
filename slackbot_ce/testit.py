@@ -14,7 +14,7 @@ class TestSlackBotFunctions(unittest.TestCase):
         self.assertTrue(bot_id.get_id() == None)
 
     def test_slack_pi(self):
-        self.assertFalse(slackpi.handle_command("","") == None)
+        self.assertTrue(slackpi.handle_command("","") == None)
 
     def test_wray_handler(self):
         self.assertFalse(wray.slacklib.handle_command('') == None)
