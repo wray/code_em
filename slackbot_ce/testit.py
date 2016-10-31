@@ -4,6 +4,7 @@ import slackpi
 import wray.slacklib
 import chris.slacklib
 import joe.slacklib
+import homeschool.baron.slacklib
 
 class TestSlackBotFunctions(unittest.TestCase):
 
@@ -33,6 +34,12 @@ class TestSlackBotFunctions(unittest.TestCase):
         self.assertFalse(joe.slacklib.handle_command('') == None)
         self.assertTrue(len(joe.slacklib.handle_command(
             joe.slacklib.COMMAND1)) > 1)
+
+    def test_baron_handler(self):
+        self.assertFalse(homeschool.baron.slacklib.handle_command('') == None)
+        self.assertTrue(len(homeschool.baron.slacklib.handle_command(
+            homeschool.baron.slacklib.COMMAND1)) > 1)
+
 
 
 if __name__ == '__main__':
