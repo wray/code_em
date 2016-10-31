@@ -25,10 +25,10 @@ class TestSlackBotFunctions(unittest.TestCase):
         self.assertTrue(len(chris.slacklib.handle_command(
             chris.slacklib.COMMAND1)) > 1)
     
-    def test_chris_handler(self):
-        self.assertFalse(chris.slacklib.handle_command('') == None)
-        self.assertTrue(len(chris.slacklib.handle_command(
-            chris.slacklib.COMMAND1)) > 1)
+    def test_joe_handler(self):
+        self.assertFalse(joe.slacklib.handle_command('') == None)
+        self.assertTrue(len(joe.slacklib.handle_command(
+            joe.slacklib.COMMAND1)) > 1)
 
 
 if __name__ == '__main__':
