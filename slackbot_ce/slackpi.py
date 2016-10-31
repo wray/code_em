@@ -26,7 +26,7 @@ def handle_command(command, channel):
     response = wray.slacklib.handle_command(command)
 
     if len(response) == 0:
-        response = "Why thank you, I don't know what else to say"
+        response = "Why thank you, I don't know what else to say."
     
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
