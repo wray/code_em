@@ -2,6 +2,7 @@
 
 # Put your commands here
 COMMAND1 = "Are you awake?"
+COMMAND2 = "What is your full name?"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -12,6 +13,8 @@ def handle_command(command):
     response = ""
     if command.find(COMMAND1) >= 0:
         response = "Just barely..."
+    elif command.find(COMMAND2) >= 0:
+        response = "Sirexa Bart"
         
     return response
 
