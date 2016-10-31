@@ -6,9 +6,14 @@ import bot_id
 
 # Instructor and student imports
 import wray.slacklib
+import joe.slacklib
+import chris.slacklib
 
 # constants
-AT_BOT = "<@" + bot_id.get_id() + ">"
+try:
+    AT_BOT = "<@" + bot_id.get_id() + ">"
+except TypeError:
+    pass
 
 # instantiate client
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
@@ -24,6 +29,8 @@ def handle_command(command, channel):
 
     response = ""
     response = wray.slacklib.handle_command(command)
+    response += joe.slacklib.handle_command(command)
+    reponse += chris.slacklib.handle_command(command)
 
     if len(response) == 0:
         response = "Why thank you, I don't know what else to say."
