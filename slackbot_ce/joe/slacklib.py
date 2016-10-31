@@ -1,8 +1,8 @@
 
 
 # Put your commands here
-COMMAND1 = "Are you awake?"
-COMMAND2 = "What is your full name?"
+COMMAND1 = "are you awake?"
+COMMAND2 = "what is your full name?"
 
 # Your handling code goes in this function
 def handle_command(command):
