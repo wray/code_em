@@ -9,6 +9,10 @@ import wray.slacklib
 import joe.slacklib
 import chris.slacklib
 import homeschool.baron.slacklib
+import homeschool.elliot.slacklib
+import homeschool.kaleb.slacklib
+import homeschool.owen.slacklib
+import homeschool.vivian.slacklib
 
 # constants
 try:
@@ -32,6 +36,10 @@ def handle_command(command, channel):
     response += joe.slacklib.handle_command(command)
     response += chris.slacklib.handle_command(command)
     response += homeschool.baron.slacklib.handle_command(command)
+    response += homeschool.elliot.slacklib.handle_command(command)
+    response += homeschool.kaleb.slacklib.handle_command(command)
+    response += homeschool.owen.slacklib.handle_command(command)
+    response += homeschool.vivian.slacklib.handle_command(command)
 
     print("["+response+"]")
     

@@ -5,6 +5,10 @@ import wray.slacklib
 import chris.slacklib
 import joe.slacklib
 import homeschool.baron.slacklib
+import homeschool.elliot.slacklib
+import homeschool.kaleb.slacklib
+import homeschool.owen.slacklib
+import homeschool.vivian.slacklib
 
 class TestSlackBotFunctions(unittest.TestCase):
 
@@ -41,6 +45,27 @@ class TestSlackBotFunctions(unittest.TestCase):
         self.assertFalse(homeschool.baron.slacklib.handle_command('') == None)
         self.assertTrue(len(homeschool.baron.slacklib.handle_command(
             homeschool.baron.slacklib.COMMAND1)) > 1)
+
+    def test_elliot_handler(self):
+        self.assertFalse(homeschool.elliot.slacklib.handle_command('') == None)
+        self.assertTrue(len(homeschool.elliot.slacklib.handle_command(
+            homeschool.elliot.slacklib.COMMAND1)) > 1)
+
+    def test_kaleb_handler(self):
+        self.assertFalse(homeschool.kaleb.slacklib.handle_command('') == None)
+        self.assertTrue(len(homeschool.kaleb.slacklib.handle_command(
+            homeschool.kaleb.slacklib.COMMAND1)) > 1)
+
+    def test_owen_handler(self):
+        self.assertFalse(homeschool.owen.slacklib.handle_command('') == None)
+        self.assertTrue(len(homeschool.owen.slacklib.handle_command(
+            homeschool.owen.slacklib.COMMAND1)) > 1)
+
+    def test_vivian_handler(self):
+        self.assertFalse(homeschool.vivian.slacklib.handle_command('') == None)
+        self.assertTrue(len(homeschool.vivian.slacklib.handle_command(
+            homeschool.vivian.slacklib.COMMAND1)) > 1)
+
 
 
 
