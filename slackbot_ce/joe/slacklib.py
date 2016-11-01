@@ -1,10 +1,10 @@
 
 import led
 # Put your commands here
-COMMAND1 = "Are you awake?"
-COMMAND2 = "What is your full name?"
+COMMAND1 = "are you awake?"
+COMMAND2 = "what is your full name?"
 COMMAND3 = "what is your favorite snack?"
-COMMAND4 = "green led"
+COMMAND4 = "blue led"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -15,10 +15,10 @@ def handle_command(command):
     response = ""
 
     if command.find(COMMAND1) >= 0:
-        response = "Just barely..."
+        response = "just barely..."
 
     elif command.find(COMMAND2) >= 0:
-        response = "Sirexa Watson Siri-Alexa."
+        response = "sirexa Watson Siri-Alexa."
 
     elif command.find(COMMAND3) >= 0:
         response = "electrons!"
@@ -33,6 +33,5 @@ def handle_command(command):
             response = "ok"
         else:
             response = "I'm not sure what to do with the green led."
-        
-    return response
 
+    return response
