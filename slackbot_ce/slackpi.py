@@ -9,6 +9,10 @@ import wray.slacklib
 import joe.slacklib
 import chris.slacklib
 import homeschool.baron.slacklib
+import homeschool.elliot.slacklib
+import homeschool.kaleb.slacklib
+import homeschool.owen.slacklib
+import homeschool.vivian.slacklib
 
 # constants
 try:
@@ -28,12 +32,17 @@ def handle_command(command, channel):
         Need to determine an algorithm for student overloaded commands.
     """
 
-    response = ""
     response = wray.slacklib.handle_command(command)
     response += joe.slacklib.handle_command(command)
     response += chris.slacklib.handle_command(command)
     response += homeschool.baron.slacklib.handle_command(command)
+    response += homeschool.elliot.slacklib.handle_command(command)
+    response += homeschool.kaleb.slacklib.handle_command(command)
+    response += homeschool.owen.slacklib.handle_command(command)
+    response += homeschool.vivian.slacklib.handle_command(command)
 
+    print("["+response+"]")
+    
     if len(response) == 0:
         response = "Why thank you, I don't know what else to say."
     
