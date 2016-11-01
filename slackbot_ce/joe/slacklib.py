@@ -4,7 +4,7 @@ import led
 COMMAND1 = "Are you awake?"
 COMMAND2 = "What is your full name?"
 COMMAND3 = "what is your favorite snack?"
-COMMAND4 = "blue led"
+COMMAND4 = "green led"
 
 # Your handling code goes in this function
 def handle_command(command):
