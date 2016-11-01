@@ -1,14 +1,10 @@
 
-
+import led
 # Put your commands here
-<<<<<<< HEAD
 COMMAND1 = "Are you awake?"
 COMMAND2 = "What is your full name?"
 COMMAND3 = "what is your favorite snack?"
-=======
-COMMAND1 = "are you awake?"
-COMMAND2 = "what is your full name?"
->>>>>>> d8d116bdf9d5536ad5b068f9ca8d2c608e51049a
+COMMAND4 = "blue led"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -17,12 +13,26 @@ def handle_command(command):
         a response, if necessary.
     """
     response = ""
+
     if command.find(COMMAND1) >= 0:
         response = "Just barely..."
+
     elif command.find(COMMAND2) >= 0:
-        response = "Sirexa Bart"
+        response = "Sirexa Watson Siri-Alexa."
+
     elif command.find(COMMAND3) >= 0:
         response = "electrons!"
+
+    elif command.find(COMMAND4) >= 0:
+
+        if command.find("on") >= 0:
+            led.green_led(1)
+            response = "ok"
+        elif command.find("off") >= 0:
+            led.green_led(0)
+            response = "ok"
+        else:
+            response = "I'm not sure what to do with the green led."
         
     return response
 
