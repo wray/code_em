@@ -1,5 +1,6 @@
 # Put your commands here
 COMMAND1 = "what do i look like?"
+COMMAND2 = ""
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -10,6 +11,8 @@ def handle_command(command):
     response = ""
     if command.find(COMMAND1) >= 0:
         response = "does it look like i have eyes too you."
+    elif command.find(COMMAND2) >= 0:
+          response = ""
         
     return response
 
