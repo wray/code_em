@@ -40,6 +40,7 @@ class TestSlackBotFunctions(unittest.TestCase):
             joe.slacklib.COMMAND1) == "Just barely..." )
         self.assertTrue(slackpi.handle_command(
             joe.slacklib.COMMAND1,"") == None)
+        #self.assertFalse(joe.slacklib.handle_command('green led on') == None)
 
     def test_baron_handler(self):
         self.assertFalse(homeschool.baron.slacklib.handle_command('') == None)
