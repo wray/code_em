@@ -71,6 +71,7 @@ class TestSlackBotFunctions(unittest.TestCase):
         self.assertTrue(wray.slacklib.handle_command("new command: how are you?, i'm fine thank you") == 'ok')
         self.assertTrue(wray.slacklib.handle_command('how are you?') == "i'm fine thank you")
         self.assertTrue(wray.slacklib.handle_command('del command: how are you?') == 'ok')
+        self.assertFalse(wray.slacklib.handle_command('what!') == None)
 
 
 

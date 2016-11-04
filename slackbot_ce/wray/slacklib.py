@@ -49,7 +49,10 @@ def handle_command(command):
     elif command.find(COMMAND6) >= 0:
         commands = shelve.open('commands')
         pc = command.find(':')
-        commands.pop(command[pc+1:].strip())
+        try:
+            commands.pop(command[pc+1:].strip())
+        except:
+            pass
         commands.sync()
         commands.close()
         response = "ok"
