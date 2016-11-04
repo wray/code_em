@@ -36,6 +36,7 @@ def handle_command(command):
         response = animals[random.randint(0,len(animals)-1)]
 
     elif command.find(COMMAND5) >= 0:
+        command = command.encode('utf-8')
         commands = shelve.open('commands')
         parse = command.split(',')
         pc = parse[0].find(':')
@@ -47,6 +48,7 @@ def handle_command(command):
         response = "ok"
 
     elif command.find(COMMAND6) >= 0:
+        command = command.encode('utf-8')
         commands = shelve.open('commands')
         pc = command.find(':')
         try:
@@ -57,6 +59,7 @@ def handle_command(command):
         commands.close()
         response = "ok"
     else:
+        command = command.encode('utf-8')
         commands = shelve.open('commands')
         if commands.has_key(command.strip()):
             response = commands[command.strip()]

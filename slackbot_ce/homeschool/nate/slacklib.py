@@ -14,5 +14,5 @@ def handle_command(command):
     elif command.find(COMMAND2) >=0:
         response = "no"
         
-    return response = "never"
+    return response
 
