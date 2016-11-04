@@ -39,17 +39,20 @@ def handle_command(command):
         commands = shelve.open('commands')
         parse = command.split(',')
         pc = parse[0].find(':')
-        parse_command = parse[0][pc+1].strip()
-        commands[parse_command] = parse[1]
+        parse_command = parse[0][pc+1:].strip()
+        commands[parse_command] = parse[1].strip()
         commands.sync()
+        print commands
         commands.close()
+        response = "ok"
 
     elif command.find(COMMAND6) >= 0:
         commands = shelve.open('commands')
         pc = command.find(':')
-        commands.pop(command[pc+1].strip())
+        commands.pop(command[pc+1:].strip())
         commands.sync()
         commands.close()
+        response = "ok"
     else:
         commands = shelve.open('commands')
         if commands.has_key(command.strip()):

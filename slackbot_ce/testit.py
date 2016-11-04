@@ -67,6 +67,10 @@ class TestSlackBotFunctions(unittest.TestCase):
         self.assertTrue(len(homeschool.vivian.slacklib.handle_command(
             homeschool.vivian.slacklib.COMMAND1)) > 1)
 
+    def test_new_command_handler(self):
+        self.assertTrue(wray.slacklib.handle_command("new command: how are you?, i'm fine thank you") == 'ok')
+        self.assertTrue(wray.slacklib.handle_command('how are you?') == "i'm fine thank you")
+        self.assertTrue(wray.slacklib.handle_command('del command: how are you?') == 'ok')
 
 
 
