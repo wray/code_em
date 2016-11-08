@@ -1,7 +1,7 @@
 # Put your commands here
 COMMAND1 = "what do i look like?"
 COMMAND2 = "bluedibal"
-COMMAND3 = " "" "
+COMMAND3 = "what is a computer"
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -16,7 +16,7 @@ def handle_command(command):
         response = "eniglesh plz."
         
     elif command.find(command3)
-        response = " "" to you too."
+        response = "your using one."
         
     return response
 
