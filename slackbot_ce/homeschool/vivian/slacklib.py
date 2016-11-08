@@ -18,14 +18,14 @@ def handle_command(command):
         response = "Huh?"
 
     elif command.find(COMMAND2) >= 0:
-        response= "hi"?
+        response= "hi?"
     elif command.find(COMMAND3) >= 0:
-        response= "how old are you"?
+        response= "how old are you?"
     elif command.find(COMMAND4) >= 0:
-        response= "12"?
+        response= "12"
     elif command.find(COMMAND5) >= 0:
-        response= "what is your favorite color? mine is blue!"?
+        response= "what is your favorite color? mine is blue!"
     elif command.find(COMMAND6) >= 0:
-        response= "cool"?
+        response= "cool"
     return response
 
