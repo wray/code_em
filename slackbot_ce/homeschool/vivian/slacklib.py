@@ -5,7 +5,7 @@ COMMAND3 = "what is yor favorite color?"
 COMMAND4 = "Purple"
 COMMAND5 = "How old are you?"
 COMMAND6 = "12"
-COMMAND7 = ""
+COMMAND7 = "Hello"
 
 # Your handling code goes in this function
 def handle_command(command):
