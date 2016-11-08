@@ -14,6 +14,7 @@ import homeschool.kaleb.slacklib
 import homeschool.owen.slacklib
 import homeschool.vivian.slacklib
 
+
 # constants
 try:
     AT_BOT = "<@" + bot_id.get_id() + ">"
