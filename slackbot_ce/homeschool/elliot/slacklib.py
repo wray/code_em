@@ -15,7 +15,7 @@ def handle_command(command):
     elif command.find(COMMAND2) >= 0:
         response = "eniglesh plz."
         
-    elif command.find(command3)
+    elif command.find(command3) >= 0:
         response = "your using one."
         
     return response
