@@ -5,6 +5,7 @@ COMMAND1 = "are you awake?"
 COMMAND2 = "what is your full name?"
 COMMAND3 = "what is your favorite snack?"
 COMMAND4 = "green led"
+COMMAND5 = "how do you clean your hands?"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -33,6 +34,8 @@ def handle_command(command):
             response = "ok"
         else:
             response = "I'm not sure what to do with the green led."
+    elif command.find(COMMAND5) >= 0:
+        response = "well, this is embarassing... I don't have hands."
         
     return response
 
