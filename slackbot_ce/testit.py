@@ -74,6 +74,5 @@ class TestSlackBotFunctions(unittest.TestCase):
     #     self.assertFalse(wray.slacklib.handle_command('what!') == None)
 
 
-
 if __name__ == '__main__':
     unittest.main()
