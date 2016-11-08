@@ -1,11 +1,7 @@
 # Put your commands here
 COMMAND1 = "what do i look like?"
-<<<<<<< Updated upstream
-COMMAND2 = ""
-=======
 COMMAND2 = "bluedibal"
->>>>>>> Stashed changes
-
+COMMAND3 = " "" "
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -15,11 +11,12 @@ def handle_command(command):
     response = ""
     if command.find(COMMAND1) >= 0:
         response = "does it look like i have eyes too you."
-    elif command.find(COMMAND2) >= 0:
-          response = ""
         
     elif command.find(COMMAND2) >= 0:
-        response = "eniglesh plz"
+        response = "eniglesh plz."
+        
+    elif command.find(command3)
+        response = " "" to you too."
         
     return response
 
