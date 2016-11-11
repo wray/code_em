@@ -19,6 +19,7 @@ import homeschool.vivian.slacklib
 try:
     AT_BOT = "<@" + bot_id.get_id() + ">"
     CHANNEL = bot_id.get_channel_id()
+    print(CHANNEL)
 except TypeError:
     pass
 
@@ -78,6 +79,7 @@ if __name__ == "__main__":
             if command and channel:
                 handle_command(command, channel)
                 if channel == CHANNEL:
+                    print("should be blinking green")
                     joe.slacklib.blink_green()
             time.sleep(READ_WEBSOCKET_DELAY)
     else:
