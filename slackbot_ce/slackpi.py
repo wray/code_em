@@ -18,6 +18,7 @@ import homeschool.vivian.slacklib
 # constants
 try:
     AT_BOT = "<@" + bot_id.get_id() + ">"
+    CHANNEL = bot_id.get_channel_id()
 except TypeError:
     pass
 
@@ -76,6 +77,8 @@ if __name__ == "__main__":
             print(command,channel)
             if command and channel:
                 handle_command(command, channel)
+                if channel == CHANNEL:
+                    joe.slacklib.blink_green()
             time.sleep(READ_WEBSOCKET_DELAY)
     else:
         print("Connection failed. Invalid Slack token or bot ID?")
