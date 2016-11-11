@@ -3,6 +3,7 @@ from slackclient import SlackClient
 
 
 BOT_NAME = 'sirexa'
+CHANNEL_NAME = 'code_em'
 
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
 
@@ -17,6 +18,21 @@ def get_id():
             if 'name' in user and user.get('name') == BOT_NAME:
                 print("Bot ID for '" + user['name'] + "' is " + user.get('id'))
                 id = user.get('id')
+    else:
+        print("could not find bot user with the name " + BOT_NAME)
+
+    return id
+
+def get_channel_id():
+    id = None
+    api_call = slack_client.api_call("channels.list")
+    if api_call.get('ok'):
+        # retrieve all users so we can find our bot
+        channels = api_call.get('channels')
+        for channel in channels:
+            print(channel.get('name'))
+            if 'name' in channel and channel.get('name') == CHANNEL_NAME:
+                id = channel.get('id')
     else:
         print("could not find bot user with the name " + BOT_NAME)
 
