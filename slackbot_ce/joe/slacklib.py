@@ -14,8 +14,9 @@ COMMAND7 = "blue led"
 def blink_green():
     for i in range(4):
         led.green_led(1)
-        time.sleep(0.5)
+        time.sleep(0.25)
         led.green_led(0)
+        time.sleep(0.25)
 
 # Your handling code goes in this function
 def handle_command(command):
