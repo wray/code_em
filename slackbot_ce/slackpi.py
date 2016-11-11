@@ -63,7 +63,7 @@ def parse_slack_output(slack_rtm_output):
     print(output_list)
     if output_list and len(output_list) > 0:
         for output in output_list:
-            if output['text'] and output['channel'] == CHANNEL:
+            if output and 'text' in output and output['channel'] == CHANNEL:
                 print("should be blinking green")
                 joe.slacklib.blink_green()
 
