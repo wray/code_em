@@ -63,6 +63,10 @@ def parse_slack_output(slack_rtm_output):
     print(output_list)
     if output_list and len(output_list) > 0:
         for output in output_list:
+            if output['text'] and output['channel'] == CHANNEL:
+                print("should be blinking green")
+                joe.slacklib.blink_green()
+
             if output and 'text' in output and AT_BOT in output['text']:
                 # return text after the @ mention, whitespace removed
                 return output['text'].split(AT_BOT)[1].strip().lower(), \
@@ -75,9 +79,6 @@ if __name__ == "__main__":
         print("StarterBot connected and running!")
         while True:
             command, channel = parse_slack_output(slack_client.rtm_read())
-            if channel == CHANNEL:
-                    print("should be blinking green")
-                    joe.slacklib.blink_green()
             print(command,channel)
             if command and channel:
                 handle_command(command, channel)
