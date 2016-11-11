@@ -1,5 +1,7 @@
 
 import led
+import time
+
 # Put your commands here
 COMMAND1 = "are you awake?"
 COMMAND2 = "what is your full name?"
@@ -8,6 +10,12 @@ COMMAND4 = "green led"
 COMMAND5 = "how do you clean your hands?"
 COMMAND6 = "red led"
 COMMAND7 = "blue led"
+
+def blink_green():
+    for i in range(4):
+        led.green_led(1)
+        time.sleep(500)
+        led.green_led(0)
 
 # Your handling code goes in this function
 def handle_command(command):
