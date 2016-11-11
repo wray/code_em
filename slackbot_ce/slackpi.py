@@ -75,12 +75,13 @@ if __name__ == "__main__":
         print("StarterBot connected and running!")
         while True:
             command, channel = parse_slack_output(slack_client.rtm_read())
+            if channel == CHANNEL:
+                    print("should be blinking green")
+                    joe.slacklib.blink_green()
             print(command,channel)
             if command and channel:
                 handle_command(command, channel)
-                if channel == CHANNEL:
-                    print("should be blinking green")
-                    joe.slacklib.blink_green()
+                
             time.sleep(READ_WEBSOCKET_DELAY)
     else:
         print("Connection failed. Invalid Slack token or bot ID?")
