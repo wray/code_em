@@ -1,7 +1,7 @@
 # Put your commands here
-COMMAND1 "What is you harry potter house?"
-COMMAND2 "1 times 8,888"
-COMMAND3 "What is your favrit tree?"
+COMMAND1 = "what is you harry potter house?"
+COMMAND2 = "1 times 8,888"
+COMMAND3 = "what is your favrit tree?"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -10,13 +10,13 @@ def handle_command(command):
         a response, if necessary.
     """
     response = ""
-    if command.find"COMMAND1 >= 0:
+    if command.find(COMMAND1) >= 0:
         response = "Greffendor"
           
-    if command.find "COMMAND" >= 0:
+    elif command.find(COMMAND2) >= 0:
          response = "8,888"
 
-    if command.find "Comaand" >= 0:
+    elif command.find(COMMAND3) >= 0:
          response = "Pine tree"
        
       
