@@ -1,7 +1,7 @@
 # Put your commands here
 COMMAND1 = "hey aidan"
 COMMAND2 = "how are you?"
-COMMAND3="yes?"
+COMMAND3 = "yes?"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -20,6 +20,6 @@ def handle_command(command):
 
 
 
-        return response
+    return response
 
 
