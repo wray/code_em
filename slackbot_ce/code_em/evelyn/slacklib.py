@@ -22,4 +22,5 @@ def handle_command(command):
 
     elif command.find(COMMAND4) >= 0:
         response = "Because pie is awesome, and Im awesome, so I must be a pie!"
-     return response
+    
+    return response
