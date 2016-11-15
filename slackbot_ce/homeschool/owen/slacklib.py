@@ -3,6 +3,7 @@ COMMAND1 = "make me a sandvich."
 COMMAND2 = "ok"
 COMMAND3 = "what food do you like to eat"
 COMMAND4 = "how old are you?"
+COMMAND5 = "do you like apples?"
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -18,5 +19,8 @@ def handle_command(command):
         response = "i can't eat stupid"
     elif command.find(COMMAND4) >= 0:
         response = "i have no age mortal!"
+    elif command.find(COMMAND5) >= 0:
+        response = "i,can't,eat!"
+
 
     return response
