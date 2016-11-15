@@ -4,8 +4,6 @@ COMMAND2 = "pick it up and throw"
 COMMAND3 = "then do water"
 COMMAND4 = "try sharks then"
 COMMAND5 = "pikachu"
-#COMMAND6
-#COMMAND7
 
 # Your handling code goes in this function
 def handle_command(command):
