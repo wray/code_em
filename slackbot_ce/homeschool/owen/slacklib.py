@@ -4,7 +4,7 @@ COMMAND2 = "ok"
 COMMAND3 = "what food do you like to eat"
 COMMAND4 = "how old are you?"
 # Your handling code goes in this function
-def handle_command(command)
+def handle_command(command):
     """
         Determine if the command is valid. If so, take action and return
         a response, if necessary.
