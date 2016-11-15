@@ -17,10 +17,10 @@ def handle_command(command):
         response = "eniglesh plz."
         
     elif command.find(COMMAND3) >= 0:
-        response = "you're using one."
+        response = "you are using one."
     
     elif command.find(COMMAND4) >= 0:
-        response = "you're wasting your life."
+        response = "you are wasting your life."
 
     return response
 
