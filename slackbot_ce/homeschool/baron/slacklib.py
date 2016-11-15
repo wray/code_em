@@ -1,5 +1,7 @@
 # Put your commands here
-COMMAND1 = "what color is the sky?"
+(COMMAND1) What is you harry potter house?
+(COOMMAND2) 1 times 8,888
+(COMMAND3) What is your favrit tree?
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -9,7 +11,15 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = "It depends on who you are asking. I would say it is purple."
+        response = Greffendor 
+          
+    if command.find(COMMAND2) >= 0:
+         response = 8,888
+
+    if command.find (COOMAND3) >= 0:
+         response = Pine tree
+       
+      
         
     return response
 
