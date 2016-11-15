@@ -1,10 +1,14 @@
 # Put your commands here
+<<<<<<< HEAD
 COMMAND1 = "what is you harry potter house?"
 COMMAND2 = "1 times 8,888"
 COMMAND3 = "what is your favrit tree?"
 COMMAND4 = "hello world"
 COMMAND5 = "space unicorn"
 COMMAND6 = "what is the couler of the sky"
+=======
+COMMAND1 = "what color is the sky?"
+>>>>>>> 16ccf864d73ea28d68ee71507ba6d88108528985
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -14,6 +18,7 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
+<<<<<<< HEAD
         response = "Greffendor"
           
     elif command.find(COMMAND2) >= 0:
@@ -32,6 +37,9 @@ def handle_command(command):
             response = "i dont have eyes" 
        
       
+=======
+        response = "It depends on who you are asking. I would say it is purple."
+>>>>>>> 16ccf864d73ea28d68ee71507ba6d88108528985
         
     return response
 
