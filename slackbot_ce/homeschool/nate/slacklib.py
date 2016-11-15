@@ -4,7 +4,7 @@ COMMAND2 = "pick it up and throw"
 COMMAND3 = "then do water"
 COMMAND4 = "try sharks then"
 COMMAND5 = "pikachu"
-
+COMMAND6 = "im outta here"
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -22,6 +22,11 @@ def handle_command(command):
         response = "WHAT IS MUD WATER AND SHARKS!?!?!?!?!?"
     elif command.find(COMMAND5) >=0:       
         response = "Oh its a pikachu? Wait WHAT IS A PIKACHU!?!?!?!?"
+    elif command.find(COMMAND6) >=0:       
+        response = "fine then go"
+
+    
+
 
     return response
     
