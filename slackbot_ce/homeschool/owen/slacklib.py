@@ -1,6 +1,7 @@
 # Put your commands here
 COMMAND1 = "make me a sandvich."
 COMMAND2 = "ok"
+COMMAND3 = "what food do you like to eat"
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -11,6 +12,8 @@ def handle_command(command):
     if command.find(COMMAND1) >= 0:
         response = "i don't have hands make the sandvich yourself."
     elif command.find(COMMAND2) >= 0:
-        respomse = "ok for what?"
-        
+        response = "ok for what?"
+    elif command.find(COMMAND3) >= 0:
+        response = "i can't eat stupid"
+
     return response
