@@ -20,7 +20,7 @@ def handle_command(command):
     elif command.find(COMMAND4) >= 0:
         response = "i have no age mortal!"
     elif command.find(COMMAND5) >= 0:
-        response = "i,can't,eat!"
+        response = "I cannot eat!"
 
 
     return response
