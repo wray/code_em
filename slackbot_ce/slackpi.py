@@ -14,9 +14,12 @@ import homeschool.kaleb.slacklib
 import homeschool.owen.slacklib
 import homeschool.vivian.slacklib
 
+
 # constants
 try:
-    AT_BOT = "<@" + bot_id.get_id() + ">"
+    AT_BOT = "@" + bot_id.get_id()
+    CHANNEL = bot_id.get_channel_id()
+    print(CHANNEL)
 except TypeError:
     pass
 
@@ -60,6 +63,10 @@ def parse_slack_output(slack_rtm_output):
     print(output_list)
     if output_list and len(output_list) > 0:
         for output in output_list:
+            if output and 'text' in output and output['channel'] == CHANNEL:
+                print("should be blinking green")
+                joe.slacklib.blink_green()
+
             if output and 'text' in output and AT_BOT in output['text']:
                 # return text after the @ mention, whitespace removed
                 return output['text'].split(AT_BOT)[1].strip().lower(), \
@@ -75,6 +82,7 @@ if __name__ == "__main__":
             print(command,channel)
             if command and channel:
                 handle_command(command, channel)
+                
             time.sleep(READ_WEBSOCKET_DELAY)
     else:
         print("Connection failed. Invalid Slack token or bot ID?")

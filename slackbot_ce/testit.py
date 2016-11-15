@@ -40,6 +40,7 @@ class TestSlackBotFunctions(unittest.TestCase):
             joe.slacklib.COMMAND1) == "Just barely..." )
         self.assertTrue(slackpi.handle_command(
             joe.slacklib.COMMAND1,"") == None)
+        #self.assertFalse(joe.slacklib.handle_command('green led on') == None)
 
     def test_baron_handler(self):
         self.assertFalse(homeschool.baron.slacklib.handle_command('') == None)
@@ -66,7 +67,11 @@ class TestSlackBotFunctions(unittest.TestCase):
         self.assertTrue(len(homeschool.vivian.slacklib.handle_command(
             homeschool.vivian.slacklib.COMMAND1)) > 1)
 
-
+    # def test_new_command_handler(self):
+    #     self.assertTrue(wray.slacklib.handle_command("new command: how are you?, i'm fine thank you") == 'ok')
+    #     self.assertTrue(wray.slacklib.handle_command('how are you?') == "i'm fine thank you")
+    #     self.assertTrue(wray.slacklib.handle_command('del command: how are you?') == 'ok')
+    #     self.assertFalse(wray.slacklib.handle_command('what!') == None)
 
 
 if __name__ == '__main__':

@@ -1,15 +1,15 @@
 import random
 import json
 import urllib3
+import shelve
 
 import temp_humidity
-import led
+#import led
 
 COMMAND1 = "who are you"
 COMMAND2 = "what can you do"
 COMMAND3 = "temp"
 COMMAND4 = "name an animal"
-COMMAND5 = "green led"
 
 def handle_command(command):
     """
@@ -32,14 +32,7 @@ def handle_command(command):
         http = urllib3.PoolManager()
         animals = json.loads(http.request('GET','https://www.randomlists.com/data/animals.json').data.decode('utf-8'))['data']
         response = animals[random.randint(0,len(animals)-1)]
-    elif command.find(COMMAND5) >= 0:
-        if command.find("on") >= 0:
-            led.green_led(1)
-            response = "ok"
-        elif command.find("off") >= 0:
-            led.green_led(0)
-            response = "ok"
-        else:
-            response = "I'm not sure what to do with the green led."
+
+        
     return response
 
