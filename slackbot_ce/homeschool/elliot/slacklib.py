@@ -2,7 +2,7 @@
 COMMAND1 = "what do i look like?"
 COMMAND2 = "bluedibal"
 COMMAND3 = "what is a computer"
-COMMAND4 = "i don't like harry poter"
+COMMAND4 = "i don't like harry potter"
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -17,10 +17,10 @@ def handle_command(command):
         response = "eniglesh plz."
         
     elif command.find(COMMAND3) >= 0:
-        response = "your using one."
+        response = "you're using one."
     
     elif command.find(COMMAND4) >= 0:
-        response = "your wasting your life."
+        response = "you're wasting your life."
 
     return response
 
