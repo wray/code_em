@@ -2,8 +2,9 @@
 COMMAND1 = "make me a sandvich."
 COMMAND2 = "ok"
 COMMAND3 = "what food do you like to eat"
+COMMAND4 = "how old are you?"
 # Your handling code goes in this function
-def handle_command(command):
+def handle_command(command)
     """
         Determine if the command is valid. If so, take action and return
         a response, if necessary.
@@ -15,5 +16,7 @@ def handle_command(command):
         response = "ok for what?"
     elif command.find(COMMAND3) >= 0:
         response = "i can't eat stupid"
+    elif command.find(COMMAND4) >= 0:
+        response = "i have no age mortal!"
 
     return response
