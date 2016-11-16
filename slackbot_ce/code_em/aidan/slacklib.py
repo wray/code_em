@@ -16,7 +16,7 @@ def handle_command(command):
         response = "what aidan? "
     elif command.find(COMMAND3)>= 0:
         response = "hi"
-elif
+
 
 
 
