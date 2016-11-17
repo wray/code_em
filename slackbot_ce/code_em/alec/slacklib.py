@@ -1,10 +1,9 @@
 # Put your commands here
-COMMAND1 = "Hi"
-COMMAND2 = "ERROR..."
+COMMAND1 = "hi"
+COMMAND2 = "error..."
 
 #Your handling code toes in this function
 def handle_command(comand):	
-	return response
 	
     elif command.find(COMMAND1) >= 0:
         response = "Oh hi there, Please input ERROR..."
