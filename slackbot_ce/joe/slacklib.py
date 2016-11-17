@@ -12,7 +12,7 @@ COMMAND4 = "green led"
 COMMAND5 = "how do you clean your hands?"
 COMMAND6 = "red led"
 COMMAND7 = "blue led"
-COMMAND8 = "blink green"
+#COMMAND8 = "blink green"
 
 def blink_green():
     for i in range(2):
@@ -68,9 +68,9 @@ def handle_command(command):
     elif command.find(COMMAND5) >= 0:
         response = "well, this is embarassing... I don't have hands."
 
-    elif command.find(COMMAND8) >= 0:
-        blink_green()
-        response = "ok"
+#    elif command.find(COMMAND8) >= 0:
+#        blink_green()
+#        response = "ok"
         
         
 
