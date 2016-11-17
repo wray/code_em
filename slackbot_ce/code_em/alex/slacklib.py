@@ -1,6 +1,6 @@
 # Put your commands here
-COMMAND1 = "Damn Daniel"
-COMMAND2 = "Back at it again in the wrong hood"
+COMMAND1 = "damn daniel"
+COMMAND2 = "back at it again in the wrong hood"
 
 # Your handling code goes in this function
 def handle_command(command):
