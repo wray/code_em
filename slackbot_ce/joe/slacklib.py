@@ -53,7 +53,7 @@ def handle_command(command):
         elif command.find("off") >= 0:
             led.red_led(0)
             response = "ok"
-           
+            
     elif command.find(COMMAND7) >= 0:
 
         if command.find("on") >= 0:
@@ -73,10 +73,4 @@ def handle_command(command):
 #        response = "ok"
         
         
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 2ef5191d4e3525b635e4372c024db0651a29756f
     return response
