@@ -33,7 +33,7 @@ class TestSlackBotFunctions(unittest.TestCase):
         self.assertFalse(chris.slacklib.handle_command('') == None)
         self.assertTrue(len(chris.slacklib.handle_command(
             chris.slacklib.COMMAND1)) > 1)
-    
+
     def test_joe_handler(self):
         self.assertFalse(joe.slacklib.handle_command('') == None)
         self.assertTrue(joe.slacklib.handle_command(
