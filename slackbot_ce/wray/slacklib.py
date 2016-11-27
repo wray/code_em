@@ -20,7 +20,7 @@ def handle_command(command):
     if command.find(COMMAND1) >= 0:
         response = "I am a simpleton bot."
     elif command.find(COMMAND2) >= 0:
-        response = "Not much right now... waiting for students to teach me."
+        response = "Not too much right now... waiting for students to teach me more."
     elif command.find(COMMAND3) >= 0:
         try:
             temp_c,temp,humidity = temp_humidity.read_temp_humidity()
