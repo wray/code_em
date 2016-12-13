@@ -5,7 +5,9 @@ COMMAND1 = "are you awake?"
 COMMAND2 = "what is your full name?"
 COMMAND3 = "what is your favorite snack?"
 COMMAND4 = "green led"
-COMMAND5 = "twitter"
+COMMAND5 = "red led"
+COMMAND6 = "blue led"
+COMMAND7 = "twitter"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -35,6 +37,29 @@ def handle_command(command):
         else:
             response = "I'm not sure what to do with the green led."
 
+    elif command.find(COMMAND5) >= 0:
+
+        if command.find("on") >= 0:
+            led.red_led(1)
+            response = "ok"
+        elif command.find("off") >= 0:
+            led.red_led(0)
+            response = "ok"
+        else:
+            response = "I'm not sure what to do with the red led."
+
+    elif command.find(COMMAND6) >= 0:
+
+        if command.find("on") >= 0:
+            led.blue_led(1)
+            response = "ok"
+        elif command.find("off") >= 0:
+            led.blue_led(0)
+            response = "ok"
+        else:
+            response = "I'm not sure what to do with the blue led."
+
+            
     elif command.find(COMMAND5) >= 0:
         response = "https://twitter.com/search?q=%40techemrva&src=typd"
         
