@@ -37,7 +37,7 @@ class TestSlackBotFunctions(unittest.TestCase):
     def test_joe_handler(self):
         self.assertFalse(joe.slacklib.handle_command('') == None)
         self.assertTrue(len(joe.slacklib.handle_command(
-            joe.slacklib.COMMAND1)) > 1)
+            joe.slacklib.COMMAND4)) > 1)
 #        self.assertTrue(slackpi.handle_command(
 #            joe.slacklib.COMMAND1,"") == None)
         #self.assertFalse(joe.slacklib.handle_command('green led on') == None)
