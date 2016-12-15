@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 from slackclient import SlackClient
 
@@ -35,14 +36,17 @@ def handle_command(command, channel):
         Need to determine an algorithm for student overloaded commands.
     """
 
-    response = wray.slacklib.handle_command(command)
-    response += joe.slacklib.handle_command(command)
-    response += chris.slacklib.handle_command(command)
-    response += homeschool.baron.slacklib.handle_command(command)
-    response += homeschool.elliot.slacklib.handle_command(command)
-    response += homeschool.kaleb.slacklib.handle_command(command)
-    response += homeschool.owen.slacklib.handle_command(command)
-    response += homeschool.vivian.slacklib.handle_command(command)
+    try:
+        response = wray.slacklib.handle_command(command)
+        response += joe.slacklib.handle_command(command)
+        response += chris.slacklib.handle_command(command)
+        response += homeschool.baron.slacklib.handle_command(command)
+        response += homeschool.elliot.slacklib.handle_command(command)
+        response += homeschool.kaleb.slacklib.handle_command(command)
+        response += homeschool.owen.slacklib.handle_command(command)
+        response += homeschool.vivian.slacklib.handle_command(command)
+    except:
+        response += str(sys.exec_info()[0])
 
     print("["+response+"]")
     
