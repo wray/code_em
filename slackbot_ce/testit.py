@@ -4,6 +4,7 @@ import slackpi
 import wray.slacklib
 import chris.slacklib
 import joe.slacklib
+import matthew.slacklib
 import homeschool.baron.slacklib
 import homeschool.elliot.slacklib
 import homeschool.kaleb.slacklib
@@ -42,6 +43,10 @@ class TestSlackBotFunctions(unittest.TestCase):
 #            joe.slacklib.COMMAND1,"") == None)
         #self.assertFalse(joe.slacklib.handle_command('green led on') == None)
 
+    def test_matthew_handler(self):
+        self.assertFalse(matthew.slacklib.handle_command('') == None)
+
+        
     def test_baron_handler(self):
         self.assertFalse(homeschool.baron.slacklib.handle_command('') == None)
         self.assertTrue(len(homeschool.baron.slacklib.handle_command(
