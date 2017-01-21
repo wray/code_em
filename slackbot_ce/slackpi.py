@@ -9,6 +9,7 @@ import bot_id
 import wray.slacklib
 import joe.slacklib
 import chris.slacklib
+import matthew.slacklib
 import homeschool.baron.slacklib
 import homeschool.elliot.slacklib
 import homeschool.kaleb.slacklib
@@ -40,6 +41,7 @@ def handle_command(command, channel):
         response = wray.slacklib.handle_command(command)
         response += joe.slacklib.handle_command(command)
         response += chris.slacklib.handle_command(command)
+        response += matthew.slacklib.handle_command(command)
         response += homeschool.baron.slacklib.handle_command(command)
         response += homeschool.elliot.slacklib.handle_command(command)
         response += homeschool.kaleb.slacklib.handle_command(command)

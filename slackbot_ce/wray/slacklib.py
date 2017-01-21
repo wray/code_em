@@ -29,9 +29,12 @@ def handle_command(command):
             response = "At my location, there is a sensor malfunction."
 
     elif command.find(COMMAND4) >= 0:
-        http = urllib3.PoolManager()
-        animals = json.loads(http.request('GET','https://www.randomlists.com/data/animals.json').data.decode('utf-8'))['data']
-        response = animals[random.randint(0,len(animals)-1)]
+        try:
+            http = urllib3.PoolManager()
+            animals = json.loads(http.request('GET','https://www.randomlists.com/data/animals.json').data.decode('utf-8'))['data']
+            response = animals[random.randint(0,len(animals)-1)]
+        except:
+            response = "Cannot find animals."
 
         
     return response
