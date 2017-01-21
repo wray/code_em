@@ -1,5 +1,5 @@
 # Put your commands here
-COMMAND1 = "hi"
+COMMAND1 = "~~"
 COMMAND2 = "what is your name?"
 COMMAND3 = "what is yor favorite color?"
 COMMAND4 = "Purple"
