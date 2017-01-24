@@ -1,7 +1,9 @@
 # Put your commands here
+
 COMMAND1 = "who is mr_techie"
 COMMAND2 = "talk in binary"
 COMMAND3 = "i dont like you"
+COMMAND4 = "hello sirexa"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -16,5 +18,6 @@ def handle_command(command):
         response = "10010010 01010101 01010000 11111101 01010110 01010111 01011110 10101010 10101001\n00010111 11110101 01010010!!!"
     elif command.find(COMMAND3) >= 0:
         response = "Well, I don't like you either!"
-
+    elif command.find(COMMAND4) >= 0:
+        response = "Why, hello to you too!"
     return response
