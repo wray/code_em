@@ -10,6 +10,7 @@ COMMAND1 = "who are you"
 COMMAND2 = "what can you do"
 COMMAND3 = "temp"
 COMMAND4 = "name an animal"
+COMMAND5 = "get-ip"
 
 def handle_command(command):
     """
@@ -23,8 +24,13 @@ def handle_command(command):
         response = "Not too much right now... waiting for students to teach me more."
     elif command.find(COMMAND3) >= 0:
         try:
+            import socket
+            s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+            s.connect(("8.8.8.8",80))
+            ip = s.getsockname()[0]
+
             temp_c,temp,humidity = temp_humidity.read_temp_humidity()
-            response = "At my location, the temperature is " + str(temp) + " and the relative humidity is " + str(humidity)
+            response = "At my location (" + ip + ") , the temperature is " + str(temp) + " and the relative humidity is " + str(humidity)
         except:
             response = "At my location, there is a sensor malfunction."
 
@@ -36,6 +42,13 @@ def handle_command(command):
         except:
             response = "Cannot find animals."
 
+    elif command.find(COMMAND5) >= 0:
+        import socket
+        s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8",80))
+        response = s.getsockname()[0]
+
+            
         
     return response
 
