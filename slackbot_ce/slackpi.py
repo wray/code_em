@@ -70,8 +70,9 @@ def parse_slack_output(slack_rtm_output):
     if output_list and len(output_list) > 0:
         for output in output_list:
             if output and 'text' in output and output['channel'] == CHANNEL:
-                print("should be blinking green")
-                joe.slacklib.blink_green()
+                print("Entering Mission Control")
+                #joe.slacklib.blink_green()
+                wray.slacklib.mission_control(bot_id,output)
 
             if output and 'text' in output and AT_BOT in output['text']:
                 # return text after the @ mention, whitespace removed

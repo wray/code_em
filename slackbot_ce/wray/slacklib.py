@@ -4,13 +4,20 @@ import urllib3
 import shelve
 
 import temp_humidity
-#import led
+import led
 
 COMMAND1 = "who are you"
 COMMAND2 = "what can you do"
 COMMAND3 = "temp"
 COMMAND4 = "name an animal"
 COMMAND5 = "get-ip"
+
+def mission_control(bot_id,output):
+    for word in output['text'].split(" "):
+        if word.lower() == 'arm':
+            led.green_led(1)
+        else:
+            led.green_led(0)
 
 def handle_command(command):
     """
