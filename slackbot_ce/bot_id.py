@@ -37,11 +37,29 @@ def get_channel_id():
         for channel in channels:
             print(channel.get('name'))
             if 'name' in channel and channel.get('name') == CHANNEL_NAME:
+                print("Channel ID for '" + CHANNEL_NAME + "' is " + channel.get('id'))
                 id = channel.get('id')
     else:
         print("could not find channel user with the name " + CHANNEL_NAME)
 
     return id
+
+def get_group_id():
+    id = None
+    api_call = slack_client.api_call("groups.list")
+    if api_call.get('ok'):
+        # retrieve all channels so we can find our channel
+        channels = api_call.get('groups')
+        for channel in channels:
+            print(channel.get('name'))
+            if 'name' in channel and channel.get('name') == CHANNEL_NAME:
+                print("Channel ID for '" + CHANNEL_NAME + "' is " + channel.get('id'))
+                id = channel.get('id')
+    else:
+        print("could not find channel user with the name " + CHANNEL_NAME)
+
+    return id
+
 
 def get_channel_name(id):
     api_call = slack_client_api_call("channels.info",channel=id)

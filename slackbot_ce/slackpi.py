@@ -20,7 +20,7 @@ import homeschool.vivian.slacklib
 # constants
 try:
     AT_BOT = "@" + bot_id.get_id()
-    CHANNEL = bot_id.get_channel_id()
+    CHANNEL = bot_id.get_group_id()
     print(CHANNEL)
 except TypeError:
     pass
