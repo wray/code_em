@@ -24,7 +24,7 @@ def red_led(state):
 def blue_led(state):
     GPIO.output(BLUE_LED,state)
 
-def launch_led(state)
+def launch_led(state):
     blue_led(state)
 
 def all_leds(state):
