@@ -1,7 +1,7 @@
 
 GREEN_LED = 27
 RED_LED = 17
-LAUNCH_LED = 20
+LAUNCH_LED = BLUE_LED = 20
 
 try:
     import RPi.GPIO as GPIO
@@ -18,12 +18,14 @@ DEBUG = 1
 def green_led(state):
     GPIO.output(GREEN_LED,state)
 
-
 def red_led(state):
     GPIO.output(RED_LED,state)
         
 def blue_led(state):
     GPIO.output(BLUE_LED,state)
+
+def launch_led(state)
+    blue_led(state)
 
 def all_leds(state):
     green_led(state)
