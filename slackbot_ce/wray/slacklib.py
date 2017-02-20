@@ -29,7 +29,7 @@ def mission_control(bot_id,output):
                 led.red_led(0)
             time.sleep(1)
             led.green_led(1) #led.launch_led(1)
-            time.sleep(1)
+            time.sleep(4)
             led.green_led(0)
             
 

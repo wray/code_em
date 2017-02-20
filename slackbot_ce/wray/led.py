@@ -1,7 +1,7 @@
 
-GREEN_LED = 16
-RED_LED = 21
-BLUE_LED = 20
+GREEN_LED = 27
+RED_LED = 17
+LAUNCH_LED = 20
 
 try:
     import RPi.GPIO as GPIO
