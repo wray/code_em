@@ -31,7 +31,7 @@ def mission_control(bot_id,output):
         elif word.lower() == 'launch-sequence-1123':
             if led.GPIO.input(led.GREEN_LED):
                 led.green_led(0)
-                for i in range(5):
+                for i in range(8):
                     led.green_led(1)
                     time.sleep(0.5)
                     led.green_led(0)
