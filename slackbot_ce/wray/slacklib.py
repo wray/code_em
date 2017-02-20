@@ -17,6 +17,12 @@ def blink_red():
     time.sleep(1)
     led.red_led(0)
 
+def blink_green(delay)
+    led.green_led(1)
+    time.sleep(delay)
+    led.green_led(0)
+    time.sleep(delay)
+
 
 def mission_control(bot_id,output):
     for word in output['text'].split(" "):
@@ -32,10 +38,11 @@ def mission_control(bot_id,output):
             if led.GPIO.input(led.GREEN_LED):
                 led.green_led(0)
                 for i in range(10):
-                    led.green_led(1)
-                    time.sleep(0.5)
-                    led.green_led(0)
-                    time.sleep(0.5)
+                    blink_green(0.5)
+                for i in range(5):
+                    blink_green(0.25)
+                for i in range(3):
+                    blink_green(0.1)
                 #time.sleep(1)
                 led.red_led(1) #led.launch_led(1)
                 time.sleep(4)
