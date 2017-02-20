@@ -14,6 +14,7 @@ COMMAND5 = "get-ip"
 
 def mission_control(bot_id,output):
     for word in output['text'].split(" "):
+        print(wword)
         if word.lower() == 'arm-1123':
             led.green_led(1)
         elif word.lower() == 'disarm':
