@@ -3,7 +3,7 @@ from slackclient import SlackClient
 
 
 BOT_NAME = 'sirexa'
-CHANNEL_NAME = 'carls_hideout'
+CHANNEL_NAME = 'mission_control'
 
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
 
