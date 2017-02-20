@@ -1,7 +1,7 @@
 import random
 import json
 import urllib3
-import shelve
+import time
 
 import temp_humidity
 import led
@@ -14,10 +14,21 @@ COMMAND5 = "get-ip"
 
 def mission_control(bot_id,output):
     for word in output['text'].split(" "):
-        if word.lower() == 'arm':
+        if word.lower() == 'arm-1123':
             led.green_led(1)
-        else:
+        elif word.lower() == 'disarm':
             led.green_led(0)
+        elif word.lower() == 'launch-sequence-1123':
+            led.green_led(0)
+            for i in range(5):
+                led.red_led(1)
+                time.sleep(1)
+                led.red_led(0)
+            time.sleep(1)
+            led.green_led(1) #led.launch_led(1)
+            time.sleep(1)
+            led.green_led(0)
+            
 
 def handle_command(command):
     """
