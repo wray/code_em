@@ -17,7 +17,7 @@ def blink_red():
     time.sleep(1)
     led.red_led(0)
 
-def blink_green(delay)
+def blink_green(delay):
     led.green_led(1)
     time.sleep(delay)
     led.green_led(0)
