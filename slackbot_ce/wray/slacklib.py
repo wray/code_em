@@ -12,26 +12,36 @@ COMMAND3 = "temp"
 COMMAND4 = "name an animal"
 COMMAND5 = "get-ip"
 
+def blink_red():
+    led.red_led(1)
+    time.sleep(1)
+    led.red_led(0)
+
+
 def mission_control(bot_id,output):
     for word in output['text'].split(" "):
         print(word)
-        led.red_led(1)
+        #led.red_led(1)
         if word.lower() == 'arm-1123':
             led.red_led(0)
             led.green_led(1)
         elif word.lower() == 'disarm':
             led.green_led(0)
+            blink_red()
         elif word.lower() == 'launch-sequence-1123':
-            led.green_led(0)
-            for i in range(5):
-                led.red_led(1)
+            if led.GPIO.input(GREEN_LED):
+                led.green_led(0)
+                for i in range(5):
+                    led.green_led(1)
+                    time.sleep(0.5)
+                    led.green_led(0)
+                    time.sleep(0.5)
                 time.sleep(1)
+                led.red_led(1) #led.launch_led(1)
+                time.sleep(4)
                 led.red_led(0)
-            time.sleep(1)
-            led.green_led(1) #led.launch_led(1)
-            time.sleep(4)
-            led.green_led(0)
-            
+            else:
+                blink_red()
 
 def handle_command(command):
     """
