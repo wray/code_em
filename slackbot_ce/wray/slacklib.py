@@ -39,9 +39,9 @@ def mission_control(bot_id,output):
                 led.green_led(0)
                 for i in range(5):
                     blink_green(0.5)
-                for i in range(10):
+                for i in range(7):
                     blink_green(0.25)
-                for i in range(15):
+                for i in range(10):
                     blink_green(0.1)
                 #time.sleep(1)
                 led.red_led(1) #led.launch_led(1)
