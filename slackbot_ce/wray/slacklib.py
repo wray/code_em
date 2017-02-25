@@ -29,26 +29,24 @@ def mission_control(bot_id,output):
         print(word)
         #led.red_led(1)
         if word.lower() == 'arm-1123':
-            led.red_led(0)
+            led.red_led(1)
             led.green_led(1)
         elif word.lower() == 'disarm':
             led.green_led(0)
             blink_red()
-        elif word.lower() == 'launch-sequence-1123':
+        elif word.lower() == 'pre-launch-sequence-1123':
             if led.GPIO.input(led.GREEN_LED):
-                led.green_led(0)
-                for i in range(5):
-                    blink_green(0.5)
-                for i in range(7):
-                    blink_green(0.25)
-                for i in range(10):
-                    blink_green(0.1)
-                #time.sleep(1)
-                led.red_led(1) #led.launch_led(1)
-                time.sleep(4)
+                blink_green(1)
                 led.red_led(0)
             else:
+                led.green_led(0)
                 blink_red()
+        elif word.lower() == 'launch-1123':
+            if led.GPIO.input(led.GREEN_LED):
+                blink_green(1)
+                blink_green(1)
+                # led.launch_led(4)
+                led.red_led(4)
 
 def handle_command(command):
     """
