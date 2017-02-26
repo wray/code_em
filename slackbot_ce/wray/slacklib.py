@@ -47,8 +47,8 @@ def mission_control(bot_id,output):
                 blink_red()
         elif word.lower() == 'launch-1123':
             if led.GPIO.input(led.GREEN_LED) and not led.GPIO.input(led.RED_LED):
-                blink_green(2)
-                blink_green(2)
+                blink_green(1)
+                blink_green(1)
                 # led.launch_led(4)
                 led.red_led(1)
                 time.sleep(4)
