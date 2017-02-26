@@ -9,7 +9,6 @@ try:
     GPIO.setup(GREEN_LED, GPIO.OUT)
     GPIO.setup(RED_LED, GPIO.OUT)
     GPIO.setup(BLUE_LED, GPIO.OUT)
-    GPIO.setup(BLUE_LED,1)
 except ImportError:
     pass
 
@@ -25,7 +24,7 @@ def blue_led(state):
     GPIO.output(BLUE_LED,state)
 
 def launch_led(state):
-    blue_led(not state)
+    blue_led(state)
 
 def launch_led(state):
     blue_led(state)
