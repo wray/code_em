@@ -12,11 +12,6 @@ COMMAND3 = "temp"
 COMMAND4 = "name an animal"
 COMMAND5 = "get-ip"
 
-try:
-    led.launch_led(0)
-except:
-    pass
-
 def blink_red():
     led.red_led(0)
     time.sleep(.5)
