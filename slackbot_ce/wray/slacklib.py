@@ -13,6 +13,8 @@ COMMAND4 = "name an animal"
 COMMAND5 = "get-ip"
 
 def blink_red():
+    led.red_led(0)
+    time.sleep(.5)
     led.red_led(1)
     time.sleep(1)
     led.red_led(0)
