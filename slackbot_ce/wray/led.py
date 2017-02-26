@@ -9,7 +9,7 @@ try:
     GPIO.setup(GREEN_LED, GPIO.OUT)
     GPIO.setup(RED_LED, GPIO.OUT)
     GPIO.setup(BLUE_LED, GPIO.OUT)
-    
+    GPIO.setup(BLUE_LED,1)
 except ImportError:
     pass
 
