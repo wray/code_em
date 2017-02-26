@@ -34,6 +34,3 @@ def all_leds(state):
     green_led(state)
     red_led(state)
     blue_led(state)
-
-
-
