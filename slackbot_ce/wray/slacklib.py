@@ -50,6 +50,7 @@ def mission_control(bot_id,output):
                 blink_green(.5)
                 blink_green(.5)
                 blink_green(.5)
+                blink_green(.5)
                 led.launch_led(1)
                 time.sleep(4)
                 led.launch_led(0)
