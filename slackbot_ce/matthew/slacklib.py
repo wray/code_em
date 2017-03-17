@@ -50,4 +50,4 @@ def handle_command(command):
         ***Creating hacked initramfs
         ***All done. Have a nice day :)"""
 
-    return response
+        return response
