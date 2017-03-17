@@ -25,7 +25,7 @@ def handle_command(command):
     elif command.find(COMMAND4) >= 0:
         response = "'Ello!'"
     elif command.find(COMMAND5) >= 0:
-        responce="""
+        response="""
         Hacking user @noobish_security...
         extracting keyring...
         A789D9GCBH7967DGJFH7687678DFF757389 | SSH KEY
@@ -50,4 +50,4 @@ def handle_command(command):
         ***Creating hacked initramfs
         ***All done. Have a nice day :)"""
 
-        return response
+    return response
