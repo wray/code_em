@@ -96,7 +96,7 @@ def handle_command(command):
         response = s.getsockname()[0]
 
     elif COMMAND6 in command:
-        response = "Wait | for | it | ... | April Fool's!"
+        response = "Wait | for | it | ... || April Fools!"
 
             
         
