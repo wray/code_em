@@ -67,7 +67,7 @@ def handle_command(command, channel):
         api_response = slack_client.api_call("chat.postMessage", channel=channel,
                                 text=response, as_user=True)
         print(api_response)
-        time.sleep(1)
+        time.sleep(0.5)
 
 def parse_slack_output(slack_rtm_output):
     """
