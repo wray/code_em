@@ -54,10 +54,20 @@ def handle_command(command, channel):
     
     if len(response) == 0:
         response = "Why thank you, I don't know what else to say."
-    
-    slack_client.api_call("chat.postMessage", channel=channel,
-                          text=response, as_user=True)
 
+    # Split responses by | and then add a delay in between
+    # First test with separate postings, better approach will be
+    # to use the chat.update command which will requires the ts back
+    # from the orginial post.
+
+    responses = response.split('|')
+
+    for response in responses:
+    
+        api_response = slack_client.api_call("chat.postMessage", channel=channel,
+                                text=response, as_user=True)
+        print(api_response)
+        time.sleep(1)
 
 def parse_slack_output(slack_rtm_output):
     """
