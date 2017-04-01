@@ -11,6 +11,7 @@ COMMAND2 = "what can you do"
 COMMAND3 = "temp"
 COMMAND4 = "name an animal"
 COMMAND5 = "get-ip"
+COMMAND6 = "delayed_responses"
 
 def blink_red():
     led.red_led(0)
@@ -93,6 +94,9 @@ def handle_command(command):
         s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
         s.connect(("8.8.8.8",80))
         response = s.getsockname()[0]
+
+    elif COMMAND6 in command:
+        response = "Wait | for | it | ... | April Fool's!"
 
             
         
