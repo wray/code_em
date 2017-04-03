@@ -55,12 +55,12 @@ def handle_command(command, channel):
     if len(response) == 0:
         response = "Why thank you, I don't know what else to say."
 
-    # Split responses by | and then add a delay in between
+    # Split responses by %% and then add a delay in between
     # First test with separate postings, better approach will be
     # to use the chat.update command which will requires the ts back
     # from the orginial post.
 
-    responses = response.split('|')
+    responses = response.split('%%')
 
     for response in responses:
     
