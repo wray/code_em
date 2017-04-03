@@ -26,28 +26,25 @@ def handle_command(command):
         response = "'Ello!'"
     elif command.find(COMMAND5) >= 0:
         response="""
-        Hacking user @noobish_security...
-        extracting keyring...
-        A789D9GCBH7967DGJFH7687678DFF757389 | SSH KEY
-        DJFHJ46476FGYHGF6Y5778ASDDDN00BISHD | LOGIN HASH
+        Hacking user @noobish_security...||done.|
         
-        downloading fs...
-        '/home' -- DONE
-        '/bin' -- DONE
-        '/usr' -- DONE
-        '/etc' -- DONE
-        '/boot' -- DONE 
+        downloading fs...|
+        '/home' -- DONE|
+        '/bin' -- DONE|
+        '/usr' -- DONE|||
+        '/etc' -- DONE||
+        '/boot' -- DONE |
         
-        searching for passwords...DONE 
+        searching for passwords...|DONE 
         this idiot does not have /etc/shadow...
-        running 'john /etc/passwd'...DONE
+        running 'john /etc/passwd'...|||||DONE
         root password is 'password123' :|
         running 'cat rootpass.txt | su -'
-        waiting...DONE
+        waiting...||DONE
         running script...
-        ***Installing kernel-mode rootkit...DONE
-        ***Regenerating intrd-2.64.img
-        ***Creating hacked initramfs
+        ***Installing kernel-mode rootkit...|||DONE
+        ***Regenerating intrd-2.64.img||
+        ***Creating hacked initramfs|
         ***All done. Have a nice day :)"""
 
     return response
