@@ -30,16 +30,6 @@ for i in range(0, len(names)):
 for i in range(0, len(homeschool_names)):
     importlib.importmodule(i)
        
-import wray.slacklib
-import joe.slacklib
-import chris.slacklib
-import matthew.slacklib
-import homeschool.baron.slacklib
-import homeschool.elliot.slacklib
-import homeschool.kaleb.slacklib
-import homeschool.owen.slacklib
-import homeschool.vivian.slacklib
-
 
 # constants
 try:
