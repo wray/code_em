@@ -4,8 +4,32 @@ import time
 from slackclient import SlackClient
 
 import bot_id
+import glob
+import importlib
 
 # Instructor and student imports
+names_paths = glob.glob("./*/slacklib.py")
+names_homeschool_paths = glob.glob("./homeschool/*/slacklib.py")
+names = []
+names_homeschool = []
+for i in range(0, len(names_paths)):
+    path = names_paths[i]
+    path.lstrip("./")
+    path.strip("/slacklib.py")
+    names.append(path)
+    
+for i in range(0, len(homeschool_names_paths)):
+    path = names_homeschool_paths[i]
+    path.lstrip("./")
+    path.strip("/slacklib.py")
+    names.append(path)
+
+for i in range(0, len(names)):
+    importlib.importmodule(i)
+ 
+for i in range(0, len(homeschool_names)):
+    importlib.importmodule(i)
+       
 import wray.slacklib
 import joe.slacklib
 import chris.slacklib
@@ -38,15 +62,15 @@ def handle_command(command, channel):
     """
 
     try:
-        response = wray.slacklib.handle_command(command)
-        response += joe.slacklib.handle_command(command)
-        response += chris.slacklib.handle_command(command)
-        response += matthew.slacklib.handle_command(command)
-        response += homeschool.baron.slacklib.handle_command(command)
-        response += homeschool.elliot.slacklib.handle_command(command)
-        response += homeschool.kaleb.slacklib.handle_command(command)
-        response += homeschool.owen.slacklib.handle_command(command)
-        response += homeschool.vivian.slacklib.handle_command(command)
+        response = wray.handle_command(command)
+        response += joe.handle_command(command)
+        response += chris.handle_command(command)
+        response += matthew.handle_command(command)
+        response += homeschool.baron.handle_command(command)
+        response += homeschool.elliot.handle_command(command)
+        response += homeschool.keleb.handle_command(command)
+        response += homeschool.owen.handle_command(command)
+        response += homeschool.vivian.handle_command(command)
     except:
         response += str(sys.exec_info()[0])
 
