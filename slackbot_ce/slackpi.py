@@ -64,7 +64,7 @@ def handle_command(command, channel):
         response += homeschool.owen.handle_command(command)
         response += homeschool.vivian.handle_command(command)
     except:
-        response += str(sys.exec_info()[0])
+        response += 'Unexpected Error.'
 
     print("["+response+"]")
     
