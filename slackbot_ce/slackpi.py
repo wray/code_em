@@ -51,6 +51,8 @@ def handle_command(command, channel):
         Need to determine an algorithm for student overloaded commands.
     """
 
+    response = ''
+    
     try:
         response = wray.handle_command(command)
         response += joe.handle_command(command)
