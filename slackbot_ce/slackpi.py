@@ -18,7 +18,7 @@ for i in range(0, len(names_paths)):
     path.strip("/slacklib.py")
     names.append(path)
     
-for i in range(0, len(homeschool_names_paths)):
+for i in range(0, len(names_homeschool_paths)):
     path = names_homeschool_paths[i]
     path.lstrip("./")
     path.strip("/slacklib.py")
@@ -27,7 +27,7 @@ for i in range(0, len(homeschool_names_paths)):
 for i in range(0, len(names)):
     importlib.importmodule(i)
  
-for i in range(0, len(homeschool_names)):
+for i in range(0, len(names_homeschool)):
     importlib.importmodule(i)
        
 
