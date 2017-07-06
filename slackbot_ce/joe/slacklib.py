@@ -7,7 +7,7 @@ COMMAND3 = "what is your favorite snack?"
 COMMAND4 = "green led"
 COMMAND5 = "red led"
 COMMAND6 = "blue led"
-COMMAND7 = "twitterr"
+COMMAND7 = "twitter syntax
 
 def blink_green():
 	for i in range(2):
