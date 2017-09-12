@@ -8,6 +8,7 @@ COMMAND4 = "green led"
 COMMAND5 = "red led"
 COMMAND6 = "blue led"
 COMMAND7 = "twitter syntax"
+COMMAND8 = "explain sensor error"
 
 def blink_green():
 	for i in range(2):
@@ -67,8 +68,11 @@ def handle_command(command):
             response = "I'm not sure what to do with the blue led."
 
             
-    elif command.find(COMMAND5) >= 0:
+    elif command.find(COMMAND7) >= 0:
         response = "https://twitter.com/search?q=%40techemrva&src=typd"
+	
+    elif command.find(COMMAND8) >= 0:
+        response = "Eric must have the room temperature set to 'Yuma Desert Mode'"
         
         
     return response
