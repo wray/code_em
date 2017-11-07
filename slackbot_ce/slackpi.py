@@ -10,6 +10,7 @@ import importlib
 # Instructor and student imports
 names_paths = glob.glob("./*/slacklib.py")
 names_homeschool_paths = glob.glob("./homeschool/*/slacklib.py")
+names_code_em_paths = glob.glob("./code_em/*/slacklib.py")
 names = []
 names_homeschool = []
 names_code_em = []
