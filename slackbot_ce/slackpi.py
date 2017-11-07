@@ -12,6 +12,7 @@ names_paths = glob.glob("./*/slacklib.py")
 names_homeschool_paths = glob.glob("./homeschool/*/slacklib.py")
 names = []
 names_homeschool = []
+names_code_em = []
 for i in range(0, len(names_paths)):
     path = names_paths[i]
     path.lstrip("./")
@@ -19,6 +20,12 @@ for i in range(0, len(names_paths)):
     names.append(path)
     
 for i in range(0, len(names_homeschool_paths)):
+    path = names_homeschool_paths[i]
+    path.lstrip("./")
+    path.strip("/slacklib.py")
+    names.append(path)
+
+for i in range(0, len(names_code_em_paths)):
     path = names_homeschool_paths[i]
     path.lstrip("./")
     path.strip("/slacklib.py")
@@ -63,6 +70,7 @@ def handle_command(command, channel):
         response += homeschool.keleb.handle_command(command)
         response += homeschool.owen.handle_command(command)
         response += homeschool.vivian.handle_command(command)
+        response += code_em.alec.handle_command(command)
     except:
         response += 'Unexpected Error.'
 
