@@ -1,5 +1,6 @@
 import os
 import sys
+import traceback
 import time
 from slackclient import SlackClient
 
@@ -8,38 +9,20 @@ import glob
 import importlib
 
 # Instructor and student imports
-names_paths = glob.glob("./*/slacklib.py")
-names_homeschool_paths = glob.glob("./homeschool/*/slacklib.py")
-names_code_em_paths = glob.glob("./code_em/*/slacklib.py")
-names = []
-names_homeschool = []
-names_code_em = []
-for i in range(0, len(names_paths)):
-    path = names_paths[i]
-    path.lstrip("./")
-    path.strip("/slacklib.py")
-    names.append(path)
-    
-for i in range(0, len(names_homeschool_paths)):
-    path = names_homeschool_paths[i]
-    path.lstrip("./")
-    path.strip("/slacklib.py")
-    names.append(path)
+import wray.slacklib
+import joe.slacklib
+import chris.slacklib
+import matthew.slacklib
 
-for i in range(0, len(names_code_em_paths)):
-    path = names_code_em_paths[i]
-    path.lstrip("./")
-    path.strip("/slacklib.py")
-    names.append(path)
-
-for i in range(0, len(names)):
-    importlib.importmodule(i)
- 
-for i in range(0, len(names_homeschool)):
-    importlib.importmodule(i)
-       
-for i in range(0, len(names_code_em)):
-    importlib.importmodule(i)
+import code_em.alec.slacklib
+import code_em.coy.slacklib
+import code_em.hadley.slacklib
+import code_em.qiuqiu.slacklib
+import code_em.zb.slacklib
+import code_em.aidan.slacklib
+import code_em.alex.slacklib
+import code_em.taixi.slacklib
+import code_em.al_kareem.slacklib
 
 # constants
 try:
@@ -64,26 +47,27 @@ def handle_command(command, channel):
     response = ''
     
     try:
-        response = wray.handle_command(command)
-        response += joe.handle_command(command)
-        response += chris.handle_command(command)
-        response += matthew.handle_command(command)
-        response += homeschool.baron.handle_command(command)
-        response += homeschool.elliot.handle_command(command)
-        response += homeschool.kaleb.handle_command(command)
-        response += homeschool.owen.handle_command(command)
-        response += homeschool.vivian.handle_command(command)
-        response += code_em.alec.handle_command(command)
-        response += code_em.coy.handle_command(command)
-        response += code_em.hadley.handle_command(command)
-        response += code_em.qiuqiu.handle_command(command)
-        response += code_em.zb.handle_command(command)
-        response += code_em.aidan.handle_command(command)
-        response += code_em.alex.handle_command(command)
-        response += code_em.taixi.handle_command(command)
-        response += code_em.al_kareem.handle_command(command)
+        response = wray.slacklib.handle_command(command)
+        response += joe.slacklib.handle_command(command)
+        response += chris.slacklib.handle_command(command)
+        response += matthew.slacklib.handle_command(command)
+        # response += homeschool.baron.handle_command(command)
+        # response += homeschool.elliot.handle_command(command)
+        # response += homeschool.kaleb.handle_command(command)
+        # response += homeschool.owen.handle_command(command)
+        # response += homeschool.vivian.handle_command(command)
+        response += code_em.alec.slacklib.handle_command(command)
+        response += code_em.coy.slacklib.handle_command(command)
+        response += code_em.hadley.slacklib.handle_command(command)
+        response += code_em.qiuqiu.slacklib.handle_command(command)
+        response += code_em.zb.slacklib.handle_command(command)
+        response += code_em.aidan.slacklib.handle_command(command)
+        response += code_em.alex.slacklib.handle_command(command)
+        response += code_em.taixi.slacklib.handle_command(command)
+        response += code_em.al_kareem.slacklib.handle_command(command)
         
     except:
+        traceback.print_exc()
         response += 'Unexpected Error.'
 
     print("["+response+"]")
