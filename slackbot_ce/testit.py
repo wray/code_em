@@ -18,7 +18,7 @@ import code_em.zb.slacklib
 import code_em.aidan.slacklib
 import code_em.alex.slacklib
 import code_em.taixi.slacklib
-import code_em.al-kareem.slacklib
+import code_em.al_kareem.slacklib
 
 class TestSlackBotFunctions(unittest.TestCase):
 
@@ -122,10 +122,10 @@ class TestSlackBotFunctions(unittest.TestCase):
         self.assertTrue(len(code_em.taixi.slacklib.handle_command(
             code_em.taixi.slacklib.COMMAND1)) > 1)
 
-    def test_al-kareem_handler(self):
-        self.assertFalse(code_em.al-kareem.slacklib.handle_command('') == None)
-        self.assertTrue(len(code_em.al-kareem.slacklib.handle_command(
-            code_em.al-kareem.slacklib.COMMAND1)) > 1)
+    def test_al_kareem_handler(self):
+        self.assertFalse(code_em.al_kareem.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.al_kareem.slacklib.handle_command(
+            code_em.al_kareem.slacklib.COMMAND1)) > 1)
 
     # def test_new_command_handler(self):
     #     self.assertTrue(wray.slacklib.handle_command("new command: how are you?, i'm fine thank you") == 'ok')

@@ -81,7 +81,7 @@ def handle_command(command, channel):
         response += code_em.aidan.handle_command(command)
         response += code_em.alex.handle_command(command)
         response += code_em.taixi.handle_command(command)
-        response += code_em.al-kareem.handle_command(command)
+        response += code_em.al_kareem.handle_command(command)
         
     except:
         response += 'Unexpected Error.'
