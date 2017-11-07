@@ -10,10 +10,10 @@ import importlib
 # Instructor and student imports
 names_paths = glob.glob("./*/slacklib.py")
 names_homeschool_paths = glob.glob("./homeschool/*/slacklib.py")
-names_code_em_paths = glob.glob("./code_em/*/slacklib.py")
+names_codeem_paths = glob.glob("./codeem/*/slacklib.py")
 names = []
 names_homeschool = []
-names_code_em = []
+names_codeem = []
 for i in range(0, len(names_paths)):
     path = names_paths[i]
     path.lstrip("./")
@@ -26,8 +26,8 @@ for i in range(0, len(names_homeschool_paths)):
     path.strip("/slacklib.py")
     names.append(path)
 
-for i in range(0, len(names_code_em_paths)):
-    path = names_homeschool_paths[i]
+for i in range(0, len(names_codeem_paths)):
+    path = names_codeem_paths[i]
     path.lstrip("./")
     path.strip("/slacklib.py")
     names.append(path)
@@ -38,6 +38,8 @@ for i in range(0, len(names)):
 for i in range(0, len(names_homeschool)):
     importlib.importmodule(i)
        
+for i in range(0, len(names_codeem)):
+    importlib.importmodule(i)
 
 # constants
 try:

@@ -10,7 +10,7 @@ import homeschool.elliot.slacklib
 import homeschool.kaleb.slacklib
 import homeschool.owen.slacklib
 import homeschool.vivian.slacklib
-import code_em.alec.slacklib
+import codeem.alec.slacklib
 
 class TestSlackBotFunctions(unittest.TestCase):
 
@@ -75,9 +75,9 @@ class TestSlackBotFunctions(unittest.TestCase):
 
 
     def test_alec_handler(self):
-        self.assertFalse(code_em.alec.slacklib.handle_command('') == None)
-        self.assertTrue(len(code_em.alec.slacklib.handle_command(
-            code_em.alec.slacklib.COMMAND1)) > 1)
+        self.assertFalse(codeem.alec.slacklib.handle_command('') == None)
+        self.assertTrue(len(codeem.alec.slacklib.handle_command(
+            codeem.alec.slacklib.COMMAND1)) > 1)
 
     # def test_new_command_handler(self):
     #     self.assertTrue(wray.slacklib.handle_command("new command: how are you?, i'm fine thank you") == 'ok')
