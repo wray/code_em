@@ -10,10 +10,10 @@ import importlib
 # Instructor and student imports
 names_paths = glob.glob("./*/slacklib.py")
 names_homeschool_paths = glob.glob("./homeschool/*/slacklib.py")
-names_codeem_paths = glob.glob("./codeem/*/slacklib.py")
+names_code_em_paths = glob.glob("./code_em/*/slacklib.py")
 names = []
 names_homeschool = []
-names_codeem = []
+names_code_em = []
 for i in range(0, len(names_paths)):
     path = names_paths[i]
     path.lstrip("./")
@@ -26,8 +26,8 @@ for i in range(0, len(names_homeschool_paths)):
     path.strip("/slacklib.py")
     names.append(path)
 
-for i in range(0, len(names_codeem_paths)):
-    path = names_codeem_paths[i]
+for i in range(0, len(names_code_em_paths)):
+    path = names_code_em_paths[i]
     path.lstrip("./")
     path.strip("/slacklib.py")
     names.append(path)
@@ -38,7 +38,7 @@ for i in range(0, len(names)):
 for i in range(0, len(names_homeschool)):
     importlib.importmodule(i)
        
-for i in range(0, len(names_codeem)):
+for i in range(0, len(names_code_em)):
     importlib.importmodule(i)
 
 # constants
@@ -70,10 +70,19 @@ def handle_command(command, channel):
         response += matthew.handle_command(command)
         response += homeschool.baron.handle_command(command)
         response += homeschool.elliot.handle_command(command)
-        response += homeschool.keleb.handle_command(command)
+        response += homeschool.kaleb.handle_command(command)
         response += homeschool.owen.handle_command(command)
         response += homeschool.vivian.handle_command(command)
-        response += codeem.alec.handle_command(command)
+        response += code_em.alec.handle_command(command)
+        response += code_em.coy.handle_command(command)
+        response += code_em.hadley.handle_command(command)
+        response += code_em.qiuqiu.handle_command(command)
+        response += code_em.zb.handle_command(command)
+        response += code_em.aidan.handle_command(command)
+        response += code_em.alex.handle_command(command)
+        response += code_em.taixi.handle_command(command)
+        response += code_em.al-kareem.handle_command(command)
+        
     except:
         response += 'Unexpected Error.'
 

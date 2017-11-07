@@ -10,7 +10,15 @@ import homeschool.elliot.slacklib
 import homeschool.kaleb.slacklib
 import homeschool.owen.slacklib
 import homeschool.vivian.slacklib
-import codeem.alec.slacklib
+import code_em.alec.slacklib
+import code_em.coy.slacklib
+import code_em.hadley.slacklib
+import code_em.qiuqiu.slacklib
+import code_em.zb.slacklib
+import code_em.aidan.slacklib
+import code_em.alex.slacklib
+import code_em.taixi.slacklib
+import code_em.al-kareem.slacklib
 
 class TestSlackBotFunctions(unittest.TestCase):
 
@@ -75,9 +83,49 @@ class TestSlackBotFunctions(unittest.TestCase):
 
 
     def test_alec_handler(self):
-        self.assertFalse(codeem.alec.slacklib.handle_command('') == None)
-##        self.assertTrue(len(codeem.alec.slacklib.handle_command(
-##            codeem.alec.slacklib.COMMAND1)) > 1)
+        self.assertFalse(code_em.alec.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.alec.slacklib.handle_command(
+            code_em.alec.slacklib.COMMAND1)) > 1)
+
+    def test_coy_handler(self):
+        self.assertFalse(code_em.coy.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.coy.slacklib.handle_command(
+            code_em.coy.slacklib.COMMAND1)) > 1)
+
+    def test_hadley_handler(self):
+        self.assertFalse(code_em.hadley.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.hadley.slacklib.handle_command(
+            code_em.hadley.slacklib.COMMAND1)) > 1)
+
+    def test_qiuqiu_handler(self):
+        self.assertFalse(code_em.qiuqiu.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.qiuqiu.slacklib.handle_command(
+            code_em.qiuqiu.slacklib.COMMAND1)) > 1)
+
+    def test_zb_handler(self):
+        self.assertFalse(code_em.zb.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.zb.slacklib.handle_command(
+            code_em.zb.slacklib.COMMAND1)) > 1)
+
+    def test_aidan_handler(self):
+        self.assertFalse(code_em.aidan.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.aidan.slacklib.handle_command(
+            code_em.aidan.slacklib.COMMAND1)) > 1)
+
+    def test_alex_handler(self):
+        self.assertFalse(code_em.alex.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.alex.slacklib.handle_command(
+            code_em.alex.slacklib.COMMAND1)) > 1)
+
+    def test_taixi_handler(self):
+        self.assertFalse(code_em.taixi.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.taixi.slacklib.handle_command(
+            code_em.taixi.slacklib.COMMAND1)) > 1)
+
+    def test_al-kareem_handler(self):
+        self.assertFalse(code_em.al-kareem.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.al-kareem.slacklib.handle_command(
+            code_em.al-kareem.slacklib.COMMAND1)) > 1)
 
     # def test_new_command_handler(self):
     #     self.assertTrue(wray.slacklib.handle_command("new command: how are you?, i'm fine thank you") == 'ok')
