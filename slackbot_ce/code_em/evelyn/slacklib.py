@@ -1,5 +1,5 @@
 # Put your commands here
-COMMAND1 = ""
+COMMAND1 = "~~"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -8,7 +8,7 @@ def handle_command(command):
         a response, if necessary.
     """
     response = ""
-    if command.find(COMMAND1) >= 0:
+    if COMMAND1 in command:
         response = "Huh?"
         
     return response
