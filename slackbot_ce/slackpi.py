@@ -73,7 +73,7 @@ def handle_command(command, channel):
         response += homeschool.keleb.handle_command(command)
         response += homeschool.owen.handle_command(command)
         response += homeschool.vivian.handle_command(command)
-        response += code_em.alec.handle_command(command)
+        response += codeem.alec.handle_command(command)
     except:
         response += 'Unexpected Error.'
 
