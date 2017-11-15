@@ -1,22 +1,18 @@
-# Put your commands here
+
 COMMAND1 = "what is 4+4?"
 COMMAND2 = "does a fish live in water?"
 COMMAND3 = "what is 8x7?"
-# Your handling code goes in this function
+
 def handle_command(command):
-    """
-        Determine if the command is valid. If so, take action and return
-        a response, if necessary.
-    """
-    response = ""
-    if COMMAND1 in command:
-        response = "8"
-    
-    elif COMMAND2 in command:
+	
+	response = ""
+	
+	if COMMAND1 in command:
+		response = "8"
+	elif COMMAND2 in command:
 		response = "Yes."
-		
-	elif COMMAND3 in command
+	
+	elif COMMAND3 in command:
 		response = "56"
-        
-    return response
+	return response
 
