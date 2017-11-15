@@ -1,5 +1,5 @@
 # Put your commands here
-COMMAND1 = "~~"
+COMMAND1 = "who's the coolest in the world"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -9,7 +9,7 @@ def handle_command(command):
     """
     response = ""
     if COMMAND1 in command:
-        response = "Huh?"
+        response = "Al-kareem is the coolest in the world"
         
     return response
 
