@@ -19,8 +19,8 @@ def handle_command(command):
 		response = "Sure!  Math: A+ , Science: A+ , Social Studies: A+ , Reading: A+ , Writing: A+  "
 	elif COMMAND6 in command:
 		response = ""
-	else:
-		response = "Why thank you, I don't know what else to say."
+	#else:
+	#	response = "Why thank you, I don't know what else to say."
 	return response
 
 
