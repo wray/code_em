@@ -4,8 +4,8 @@ import time
 sensor = None
 
 try:
-    import Adafruit_DHT
-    sensor = Adafruit_DHT.DHT22
+	import Adafruit_DHT
+	sensor = Adafruit_DHT.DHT22
 except ImportError:
     pass
 
