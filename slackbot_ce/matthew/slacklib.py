@@ -1,10 +1,12 @@
 # Put your commands here
 
-COMMAND1 = "who is mr_techie"
+COMMAND1 = "who is sirtomato"
 COMMAND2 = "talk in binary"
 COMMAND3 = "i dont like you"
 COMMAND4 = "brit"
 COMMAND5 = "h@ck3r_1if3"
+COMMAND6 = "promote"
+
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -15,11 +17,9 @@ def handle_command(command):
 
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = "I cannot reveal his identity."
+        response = "A cuber/coder that loves Arch Linux and tiling window managers."
     elif command.find(COMMAND2) >= 0:
-        response = """01001001 00100000 01100110 01110101 01100011 01101011 0
-        1101001 01101110 01100111 00100000 01101000 01100001 01110100 01100101
-        00100000 01111001 01101111 01110101!!!"""
+        response = """01000111 01101111 00100000 01100001 01110111 01100001 01111001 00101110 00100000 01000100 01101111 01101110 00100111 01110100 00100000 01110100 01100001 01110101 01101110 01110100 00100000 01101101 01100101 00100000 01110111 01101001 01110100 01101000 00100000 01111001 01101111 01110101 01110010 00100000 01100100 01100101 01101101 01100001 01101110 01100100 01110011 00101110"""
     elif command.find(COMMAND3) >= 0:
         response = "Well, I don't like you either!"
     elif command.find(COMMAND4) >= 0:
