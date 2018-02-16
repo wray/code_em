@@ -5,7 +5,7 @@ COMMAND2 = "talk in binary"
 COMMAND3 = "i dont like you"
 COMMAND4 = "brit"
 COMMAND5 = "h@ck3r_1if3"
-COMMAND6 = "promote"
+COMMAND6 = "leaderboard"
 
 
 # Your handling code goes in this function
@@ -45,14 +45,14 @@ def handle_command(command):
         [*] Installing kernel-mode rootkit...%%%%%%DONE
         [*] Regenerating intrd-2.64.img%%%%
         [*] Creating hacked initramfs%%
-        [*] All done. Have a nice day, you hacked fool. :)"""
-    elif "leaderboard" in command:
+        [*] All done. Have a nice day, you hacked fool. Ha Ha Ha! :)"""
+    elif command.find(COMMAND6):
         # Custom commandhandler for sirexa
         
         leaderboard_command = command.split()
-        leaderboard_command = leaderboard_command[1:]
+        leaderboard_command = leaderboard_command[1]
         
-        if leaderboard_command[0] == "help":
+        if leaderboard_command == "help":
             response = """sirexa leaderboard v0.0.1
                 give point: `@sirexa leaderboard +username`
                 example: `@sirexa leaderboard +sirtomato`
