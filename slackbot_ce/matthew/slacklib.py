@@ -1,3 +1,5 @@
+import pickle
+
 # Put your commands here
 
 COMMAND1 = "who is sirtomato"
@@ -6,7 +8,7 @@ COMMAND3 = "i dont like you"
 COMMAND4 = "brit"
 COMMAND5 = "h@ck3r_1if3"
 COMMAND6 = "leaderboard"
-
+command = input()
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -14,7 +16,6 @@ def handle_command(command):
         Determine if the command is valid. If so, take action and return
         a response, if necessary.
     """
-
     response = ""
     if command.find(COMMAND1) >= 0:
         response = "A cuber/coder that loves Arch Linux and tiling window managers."
@@ -46,13 +47,11 @@ def handle_command(command):
         [*] Regenerating intrd-2.64.img%%%%
         [*] Creating hacked initramfs%%
         [*] All done. Have a nice day, you hacked fool. Ha Ha Ha! :)"""
-    elif command.find(COMMAND6):
+    elif COMMAND6 in command:
         # Custom commandhandler for sirexa
-        
-        leaderboard_command = command.split()
-        leaderboard_command = leaderboard_command[1]
-        
-        if leaderboard_command == "help":
+        f = open("leaderboard.dat")
+
+        if command.lower() == "leaderboard help":
             response = """sirexa leaderboard v0.0.1
                 give point: `@sirexa leaderboard +username`
                 example: `@sirexa leaderboard +sirtomato`
@@ -61,6 +60,5 @@ def handle_command(command):
                 example: `@sirexa leaderboard -notsirtomato`
                 
                 leaderboard: `@sirexa leaderboard points`"""
-        #etc
-        
     return response
+print(handle_command(command))
