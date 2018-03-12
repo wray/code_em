@@ -7,7 +7,7 @@ COMMAND3 = "what is your favorite snack?"
 COMMAND4 = "green led"
 COMMAND5 = "red led"
 COMMAND6 = "blue led"
-COMMAND7 = "twitter syntax"
+COMMAND7 = "what do you read on twitter?"
 COMMAND8 = "explain sensor error"
 
 def blink_green():
@@ -69,7 +69,7 @@ def handle_command(command):
 
             
     elif command.find(COMMAND7) >= 0:
-        response = "https://twitter.com/search?q=%40techemrva&src=typd"
+        response = "I recommend checking out TechEmRVA https://twitter.com/search?q=%40techemrva&src=typd"
 	
     elif command.find(COMMAND8) >= 0:
         response = "Eric must have the room temperature set to 'Yuma Desert Mode'"
