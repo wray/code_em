@@ -46,21 +46,21 @@ def handle_command(command):
         [*] Regenerating intrd-2.64.img%%%%
         [*] Creating hacked initramfs%%
         [*] All done. Have a nice day, you hacked fool. Ha Ha Ha! :)"""
-    elif command.find(COMMAND6):
-        # Custom commandhandler for sirexa
-        
-        leaderboard_command = command.split()
-        leaderboard_command = leaderboard_command[1]
-        
-        if leaderboard_command == "help":
-            response = """sirexa leaderboard v0.0.1
-                give point: `@sirexa leaderboard +username`
-                example: `@sirexa leaderboard +sirtomato`
-                
-                take point: `@sirexa leaderboard -username`
-                example: `@sirexa leaderboard -notsirtomato`
-                
-                leaderboard: `@sirexa leaderboard points`"""
+##    elif command.find(COMMAND6):
+##        # Custom commandhandler for sirexa
+##        
+##        leaderboard_command = command.split()
+##        leaderboard_command = leaderboard_command[1]
+##        
+##        if leaderboard_command == "help":
+##            response = """sirexa leaderboard v0.0.1
+##                give point: `@sirexa leaderboard +username`
+##                example: `@sirexa leaderboard +sirtomato`
+##                
+##                take point: `@sirexa leaderboard -username`
+##                example: `@sirexa leaderboard -notsirtomato`
+##                
+##                leaderboard: `@sirexa leaderboard points`"""
         #etc
         
     return response
