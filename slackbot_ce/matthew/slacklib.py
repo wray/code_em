@@ -46,6 +46,15 @@ def handle_command(command):
         [*] Regenerating intrd-2.64.img%%%%
         [*] Creating hacked initramfs%%
         [*] All done. Have a nice day, you hacked fool. Ha Ha Ha! :)"""
+
+#*** Note to Matthew:
+        # In COMMAND6 (below), Travis returns a fail
+        # due to index out of range. From what I see,
+        # I think you need to create the list "leaderboard_command"
+        # if it is indeed a list. I think your method split() would
+        # work as well.
+        # -Joe
+        
 ##    elif command.find(COMMAND6):
 ##        # Custom commandhandler for sirexa
 ##        
