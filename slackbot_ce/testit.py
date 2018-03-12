@@ -54,7 +54,7 @@ class TestSlackBotFunctions(unittest.TestCase):
 
     def test_matthew_handler(self):
         self.assertFalse(matthew.slacklib.handle_command('') == None)
-        self.assertTrue(len(joe.slacklib.handle_command(
+        self.assertTrue(len(matthew.slacklib.handle_command(
             matthew.slacklib.COMMAND1)) > 1)
 
         
