@@ -20,6 +20,11 @@ import code_em.alex.slacklib
 import code_em.taixi.slacklib
 import code_em.al_kareem.slacklib
 
+import code_em.anaya.slacklib
+import code_em.mattias.slacklib
+import code_em.travis.slacklib
+import code_em.tyler.slacklib
+
 class TestSlackBotFunctions(unittest.TestCase):
 
     def test_ci(self):
@@ -128,6 +133,26 @@ class TestSlackBotFunctions(unittest.TestCase):
         self.assertFalse(code_em.al_kareem.slacklib.handle_command('') == None)
         self.assertTrue(len(code_em.al_kareem.slacklib.handle_command(
             code_em.al_kareem.slacklib.COMMAND1)) > 1)
+
+    def test_anaya_handler(self):
+        self.assertFalse(code_em.anaya.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.anaya.slacklib.handle_command(
+            code_em.anaya.slacklib.COMMAND1)) > 1)
+
+    def test_mattias_handler(self):
+        self.assertFalse(code_em.mattias.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.mattias.slacklib.handle_command(
+            code_em.mattias.slacklib.COMMAND1)) > 1)
+
+    def test_travis_handler(self):
+        self.assertFalse(code_em.travis.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.travis.slacklib.handle_command(
+            code_em.travis.slacklib.COMMAND1)) > 1)
+
+    def test_tyler_handler(self):
+        self.assertFalse(code_em.tyler.slacklib.handle_command('') == None)
+        self.assertTrue(len(code_em.tyler.slacklib.handle_command(
+            code_em.tyler.slacklib.COMMAND1)) > 1)
 
     # def test_new_command_handler(self):
     #     self.assertTrue(wray.slacklib.handle_command("new command: how are you?, i'm fine thank you") == 'ok')
