@@ -47,53 +47,32 @@ def handle_command(command):
         [*] Regenerating intrd-2.64.img%%%%
         [*] Creating hacked initramfs%%
         [*] All done. Have a nice day, you hacked fool. Ha Ha Ha! :)"""
-    elif COMMAND6 in command:
-        # Custom commandhandler for sirexa
 
-        if command.lower() == "leaderboard help":
-            response = """sirexa leaderboard v0.0.1
-                give point: `@sirexa leaderboard +username`
-                example: `@sirexa leaderboard +sirtomato`
-                
-                take point: `@sirexa leaderboard -username`
-                example: `@sirexa leaderboard -notsirtomato`
-                
-                leaderboard: `@sirexa leaderboard points`"""
-        elif command.lower().startswith("leaderboard +"):
-            pointfile = open("points.json", "r")
-            points = json.load(pointfile)
-            pointfile.close()
-            user = command.lower()[12:]
-            try:
-                points[user] = points[user] + 1
-                return "@"+user[1:]+" has "+points[user]+" points."
-            except:
-                points[user] = 1
-                return "@"+user[1:]+" has 1 point"
-            pointfile = open("points.json", "w")
-            jsonpoints = json.dumps(points, sort_keys=True, indent="4")
-            pointfile.write(jsonpoints)
-            pointfile.close()
-        elif command.lower().startswith("leaderboard -"):
-            pointfile = open("points.json", "r")
-            points = json.load(pointfile)
-            pointfile.close()
-            user = command.lower()[12:]
-            try:
-                points[user] = points[user] - 1
-                return "@"+user[1:]+" has "+points[user]+" points."
-            except:
-                points[user] = -1
-                return "@"+user[1:]+" has -1 points"
-            jsonpoints = json.dumps(points, sort_keys=True, indent="4")
-            pointfile.write(jsonpoints)
-            pointfile.close()
-        else:
-            for i in points.keys():
-                print(i + "\t" + points[i])
-    if COMMAND7 in command:
-        response = exec(command.split("math ")[0])
-
+#*** Note to Matthew:
+        # In COMMAND6 (below), Travis returns a fail
+        # due to index out of range. From what I see,
+        # I think you need to create the list "leaderboard_command"
+        # if it is indeed a list. I think your method split() would
+        # work as well.
+        # -Joe
+        
+##    elif command.find(COMMAND6):
+##        # Custom commandhandler for sirexa
+##        
+##        leaderboard_command = command.split()
+##        leaderboard_command = leaderboard_command[1]
+##        
+##        if leaderboard_command == "help":
+##            response = """sirexa leaderboard v0.0.1
+##                give point: `@sirexa leaderboard +username`
+##                example: `@sirexa leaderboard +sirtomato`
+##                
+##                take point: `@sirexa leaderboard -username`
+##                example: `@sirexa leaderboard -notsirtomato`
+##                
+##                leaderboard: `@sirexa leaderboard points`"""
+        #etc
+        
     return response
 
 command = raw_input("[<-] command: ")
