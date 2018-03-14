@@ -75,6 +75,6 @@ def handle_command(command):
         
     return response
 
-command = raw_input("[<-] command: ")
-out = handle_command(command)
-print "[->] " + out
+#command = raw_input("[<-] command: ")
+#out = handle_command(command)
+#print "[->] " + out
