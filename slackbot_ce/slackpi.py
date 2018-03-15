@@ -29,6 +29,13 @@ import code_em.mattias.slacklib
 import code_em.travis.slacklib
 import code_em.tyler.slacklib
 
+import code_em.aaruv.slacklib
+import code_em.anooshka.slacklib
+import code_em.owen.slacklib
+import code_em.patrick.slacklib
+import code_em.summer.slacklib
+import code_em.alec_r.slacklib
+
 # constants
 try:
     AT_BOT = "@" + bot_id.get_id()
@@ -75,6 +82,13 @@ def handle_command(command, channel):
         response += code_em.mattias.slacklib.handle_command(command)
         response += code_em.travis.slacklib.handle_command(command)
         response += code_em.tyler.slacklib.handle_command(command)
+
+        response += code_em.aaruv.slacklib.handle_command(command)
+        response += code_em.anooshka.slacklib.handle_command(command)
+        response += code_em.owen.slacklib.handle_command(command)
+        response += code_em.patrick.slacklib.handle_command(command)
+        response += code_em.summer.slacklib.handle_command(command)
+        response += code_em.alec.slacklib.handle_command(command)
         
     except:
         traceback.print_exc()
