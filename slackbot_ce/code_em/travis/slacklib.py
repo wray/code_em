@@ -1,14 +1,14 @@
 # Put your commands here
 COMMAND1 = "what?"
 COMMAND2 = "what is your name"
-COMMAND3 = "How was your day"
+COMMAND3 = "how was your day"
 COMMAND4 = "how long have you been a robot"
-COMMAND5 = "Who was your creator"
-COMMAND6 = "Nice weather were haveing"
-COMMAND7 = "You are a fun sponge"
-COMMAND8 = "I hate you"
-COMMAND9 = "You should have never existed"
-COMMAND10 = "I will"
+COMMAND5 = "who was your creator"
+COMMAND6 = "nice weather were haveing"
+COMMAND7 = "you are a fun sponge"
+COMMAND8 = "i hate you"
+COMMAND9 = "you should have never existed"
+COMMAND10 = "i will"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -19,31 +19,31 @@ def handle_command(command):
     response = ""
     if COMMAND1 in command:
         response = "Huh?"
-        response = ""
+#        response = ""
     if COMMAND2 in command:
         response = "Axe body spray"
-        response = ""
+#        response = ""
     if COMMAND3 in command:
         response = "good"
-        response = ""
+#        response = ""
     if COMMAND4 in command:
-		response = "10 years"
-		response = ""
+        response = "10 years"
+#		response = ""
     if COMMAND5 in command:
         response = "You"
-        response = ""
+#        response = ""
     if COMMAND6 in command:
         response = "It has been awful weather"
-        response = ""
+#        response = ""
     if COMMAND7 in command:
         response = "I have never herb of a fun sponge before"
-        response = ""
+#        response = ""
     if COMMAND8 in command:
         response = "Sorry"
-        response = ""
+#        response = ""
     if COMMAND9 in command:
         response = "Then delete me"
-        response = ""
+#        response = ""
     if COMMAND10 in command:
          response = "Goodbye"
     return response
