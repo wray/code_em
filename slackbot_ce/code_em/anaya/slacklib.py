@@ -15,20 +15,21 @@ def handle_command(command):
     response = ""
     if COMMAND1 in command:
         response = "Salutations to you to."
-Sal
-    response = ""
+
+#    response = ""
     if COMMAND2 in command:
         response = "I am not sure."
 
-    response = ""
+#    response = ""
     if COMMAND3 in command:
         response = "I go to Echo Lake Elementary School."
  
-     response = ""
+#     response = ""
     if COMMAND4 in command:
         response = "I love pastries!"
 
-    response = ""
+#    response = ""
     if COMMAND5 in command:
-        response = "I am allergic to grass and mulch.sss"   
+        response = "I am allergic to grass and mulch.sss"
+
     return response
