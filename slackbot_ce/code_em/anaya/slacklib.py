@@ -1,9 +1,9 @@
 # Put your commands here
-COMMAND1 = "Salutations"
-COMMAND2 = "Is it going to snow tomorrow?"
-COMMAND3 = "Which school do you go to?"
-COMMAND4 = "Do you like pastries?"
-COMMAND5 = "What are you allergic to?"
+COMMAND1 = "salutations"
+COMMAND2 = "is it going to snow tomorrow?"
+COMMAND3 = "which school do you go to?"
+COMMAND4 = "do you like pastries?"
+COMMAND5 = "what are you allergic to?"
 
 
 # Your handling code goes in this function
