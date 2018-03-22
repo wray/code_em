@@ -1,14 +1,26 @@
 # Put your commands here
-COMMAND1 = "~~"
+COMMAND1 = "Is this meme dank?"
+COMMAND2 = "Yes"
+COMMAND3 = "No"
+COMMAND4 = "How much is the new MacBook Pro?"
+COMMAND5 = "yea"
+COMMAND6 = "How many things has Linus dropped?"
 
 # Your handling code goes in this function
 def handle_command(command):
-    """
-        Determine if the command is valid. If so, take action and return
-        a response, if necessary.
-    """
-    response = ""
-    if COMMAND1 in command:
-        response = "Huh?"
+
+	response = ""
+	if COMMAND1 in command:
+		response = "It depends. Is it on r/dankmemes?"
+	if COMMAND2 in command:
+		response = "Yes. Your meme is in fact dank."
+	if COMMAND3 in command:
+		response = "boi u best be on r/dankmemes"
+	if COMMAND4 in command:
+		response = "Did you mean _**DongleBook Pro**_?"
+	if COMMAND5 in command:
+		response = "boiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+	if COMMAND6 in command:
+		response = "I'm sorry, I had the answer but Linus dropped it."
         
-    return response
+	return response
