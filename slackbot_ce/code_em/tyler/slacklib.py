@@ -6,13 +6,8 @@ COMMAND4 = "ooph"
 COMMAND5 = "what is the weather"
 # Your handling code goes in this function
 def handle_command(command):
-    """
-        Determine if the command is valid. If so, take action and return
-        a response, if necessary.
-    """
-    response = ""
-    
-    if COMMAND1 in command:
+	response = ""
+	if COMMAND1 in command:
 		response = "is it me you're looking for"
 	if COMMAND2 in command:
 		response = "is dead"
