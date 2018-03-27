@@ -18,6 +18,7 @@ def handle_command(command):
 		response = "k"
 	if COMMAND5 in command:
 		response = "floor going up on a Tuesday"
-	return response
+
 	if COMMAND6 in command:
 		response = "are you single"
+	return response
