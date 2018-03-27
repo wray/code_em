@@ -4,6 +4,7 @@ COMMAND2 = "vine"
 COMMAND3 = "what was before 1899"
 COMMAND4 = "ooph"
 COMMAND5 = "what is the weather"
+COMMAND6 = "why"
 # Your handling code goes in this function
 def handle_command(command):
 	response = ""
@@ -18,3 +19,5 @@ def handle_command(command):
 	if COMMAND5 in command:
 		response = "floor going up on a Tuesday"
 	return response
+	if COMMAND6 in command:
+		response = "are you single"
