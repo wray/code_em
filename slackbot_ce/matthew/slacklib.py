@@ -9,6 +9,7 @@ COMMAND4 = "brit"
 COMMAND5 = "h@ck3r_l1f3"
 COMMAND6 = "leaderboard"
 COMMAND7 = "math"
+COMMAND8 = "ship"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -59,7 +60,7 @@ def handle_command(command):
 ##    elif command.find(COMMAND6):
 ##        # Custom commandhandler for sirexa
 ##        
-##        leaderboard_command = command.split()
+##        leaderboard_command = command.split(' ')
 ##        leaderboard_command = leaderboard_command[1]
 ##        
 ##        if leaderboard_command == "help":
@@ -72,9 +73,11 @@ def handle_command(command):
 ##                
 ##                leaderboard: `@sirexa leaderboard points`"""
         #etc
+    elif COMMAND8 in command:
+        response = command.split(" ")[1][:4] + command.split(" ")[2][4:]
         
     return response
 
-#command = raw_input("[<-] command: ")
-#out = handle_command(command)
-#print "[->] " + out
+command = raw_input("[<-] command: ")
+out = handle_command(command)
+print "[->] " + out
