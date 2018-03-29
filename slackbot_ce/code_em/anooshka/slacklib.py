@@ -1,10 +1,9 @@
 # Put your commands here
-COMMAND1 = "Would you rather live your entire life in a virtual reality where all of your wishes are granted, or in the real world?"
-COMMAND2 = "Would you rather be completely invisible for one day, or be able to fly for one day?"
-COMMAND3 = "Would you rather have four hands, or four feet?"
-COMMAND4 = "Would you rather be a reverse mermaid, or a reverse centaur?"
-COMMAND5 = "Would you rather have the ability to never be paper cut, or get something stuck in your eye?"
-
+COMMAND1 = "would you rather live your entire life in a virtual reality where all of your wishes are granted, or in the real world?"
+COMMAND2 = "would you rather be completely invisible for one day, or be able to fly for one day?"
+COMMAND3 = "would you rather have four hands, or four feet?"
+COMMAND4 = "would you rather be a reverse mermaid, or a reverse centaur?"
+COMMAND5 = "would you rather have the ability to never be paper cut, or get something stuck in your eye?"
 
 # Your handling code goes in this function
 def handle_command(command):
