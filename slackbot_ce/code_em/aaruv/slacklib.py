@@ -1,9 +1,9 @@
 # Put your commands here
-COMMAND1 = "EPIC yo "
-COMMAND2 = "Hello"
+COMMAND1 = "epic yo "
+COMMAND2 = "hello"
 COMMAND3 = "what is your fav football team?"
-COMMAND4 = "Do you like mincraft?"
-COMMAND5 = "WHAT is your name"
+COMMAND4 = "do you like mincraft?"
+COMMAND5 = "what is your name"
 # Your handling code goes in this function
 def handle_command(command):	
 	response = ""
