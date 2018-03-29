@@ -1,10 +1,10 @@
 # Put your commands here
-COMMAND1 = "Is this meme dank?"
-COMMAND2 = "Yes"
-COMMAND3 = "No"
-COMMAND4 = "How much is the new MacBook Pro?"
+COMMAND1 = "is this meme dank?"
+COMMAND2 = "yes"
+COMMAND3 = "no"
+COMMAND4 = "how much is the new MacBook Pro?"
 COMMAND5 = "yea"
-COMMAND6 = "How many things has Linus dropped?"
+COMMAND6 = "how many things has Linus dropped?"
 
 # Your handling code goes in this function
 def handle_command(command):
