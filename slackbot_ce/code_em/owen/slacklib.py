@@ -14,9 +14,13 @@ def handle_command(command):
     response = ""
     if COMMAND1 in command:
         response = "Iphone10."
+    if COMMAND2 in command:
         response = " YEEEEEEEEEEEESSSSSSSSSSSSSSSSSS!" 
+    if COMMAND3 in command:
         response = "The show stinks but the comic is geat."
+    if COMMAND4 in command:   
         response = "Half-life 1."
+    if COMMAND5 in command:   
         response = "No."
         
         
