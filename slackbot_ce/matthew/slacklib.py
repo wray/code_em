@@ -56,22 +56,23 @@ def handle_command(command):
         # if it is indeed a list. I think your method split() would
         # work as well.
         # -Joe
+        # fixed. travis test didn't feed any input besides command name, hence causing the index out of range error. cheers!
         
-##    elif command.find(COMMAND6):
-##        # Custom commandhandler for sirexa
-##        
-##        leaderboard_command = command.split(' ')
-##        leaderboard_command = leaderboard_command[1]
-##        
-##        if leaderboard_command == "help":
-##            response = """sirexa leaderboard v0.0.1
-##                give point: `@sirexa leaderboard +username`
-##                example: `@sirexa leaderboard +sirtomato`
-##                
-##                take point: `@sirexa leaderboard -username`
-##                example: `@sirexa leaderboard -notsirtomato`
-##                
-##                leaderboard: `@sirexa leaderboard points`"""
+    elif command.find(COMMAND6):
+        # Custom commandhandler for sirexa
+        
+        leaderboard_command = command.split(' ').append("help")
+        leaderboard_command = leaderboard_command[1]
+        
+        if leaderboard_command == "help":
+            response = """sirexa leaderboard v0.0.1
+                give point: `@sirexa leaderboard +username`
+                example: `@sirexa leaderboard +sirtomato`
+                
+                take point: `@sirexa leaderboard -username`
+                example: `@sirexa leaderboard -notsirtomato`
+                
+                leaderboard: `@sirexa leaderboard points`"""
         #etc
     elif COMMAND8 in command:
         response = command.split(" ")[1][:4] + command.split(" ")[2][4:]
