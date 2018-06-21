@@ -8,7 +8,7 @@ COMMAND3 = "i dont like you"
 COMMAND4 = "brit"
 COMMAND5 = "h@ck3r_l1f3"
 COMMAND6 = "leaderboard"
-COMMAND7 = "math"
+# COMMAND7 = "math" travis no like blank return
 COMMAND8 = "ship"
 
 # Your handling code goes in this function
