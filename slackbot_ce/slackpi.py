@@ -57,7 +57,7 @@ def handle_command(command, channel):
     """
 
     response = ''
-    
+
     try:
         response = wray.slacklib.handle_command(command)
         response += joe.slacklib.handle_command(command)
@@ -89,13 +89,13 @@ def handle_command(command, channel):
         response += code_em.patrick.slacklib.handle_command(command)
         response += code_em.summer.slacklib.handle_command(command)
         response += code_em.alec.slacklib.handle_command(command)
-        
+
     except:
         traceback.print_exc()
-        response += 'Unexpected Error.'
+        response += 'Something happend. Uh oh!'
 
     print("["+response+"]")
-    
+
     if len(response) == 0:
         response = "Why thank you, I don't know what else to say."
 
@@ -107,7 +107,7 @@ def handle_command(command, channel):
     responses = response.split('%%')
 
     for response in responses:
-    
+
         api_response = slack_client.api_call("chat.postMessage", channel=channel,
                                 text=response, as_user=True)
         print(api_response)
@@ -143,10 +143,7 @@ if __name__ == "__main__":
             print(command,channel)
             if command and channel:
                 handle_command(command, channel)
-                
+
             time.sleep(READ_WEBSOCKET_DELAY)
     else:
         print("Connection failed. Invalid Slack token or bot ID?")
-
-
-
